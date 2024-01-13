@@ -15,7 +15,7 @@ const UpdateCategory = () => {
   const fetchCategoryDetails = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/admin/get-category/${id}`
+        `https://ks-scientifique-api.onrender.com/admin/get-category/${id}`
       );
       setCategoryDetails(response.data);
       setCategoryName(response.data.name);
@@ -35,7 +35,7 @@ const UpdateCategory = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/admin/update-category/${id}`,
+        `https://ks-scientifique-api.onrender.com/admin/update-category/${id}`,
         formData,
         {
           headers: {

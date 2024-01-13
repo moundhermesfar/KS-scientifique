@@ -9,12 +9,12 @@ const Admin = () => {
           Admin Dashboard
         </h1>
         <div className="flex flex-col space-y-4">
-          <Link to={"categories/get-categories"}>
+          <Link to={"https://ks-scientifique-api.onrender.com/admin/categories/get-categories"}>
             <button className="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 focus:outline-none">
               Manage Categories
             </button>
           </Link>
-          <Link to={"products/get-products"}>
+          <Link to={"https://ks-scientifique-api.onrender.com/admin/products/get-products"}>
             <button className="bg-red-500 text-white py-2 px-6 rounded-full hover:bg-red-600 focus:outline-none">
               Manage Products
             </button>

@@ -17,7 +17,7 @@ const CreateCategory = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/admin/categories/create-category",
+        "https://ks-scientifique-api.onrender.com/admin/categories/create-category",
         formData
       );
       console.log(response.data);
@@ -53,7 +53,7 @@ const CreateCategory = () => {
           onChange={(e) => setFile(e.target.files[0])}
           className="mb-4 p-2 border border-gray-300 rounded-md w-full"
         />
-        <Link to="/admin/categories/get-categories">
+        <Link to="https://ks-scientifique-api.onrender.com/admin/categories/get-categories">
           <button
             onClick={handleUpload}
             className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer w-full"

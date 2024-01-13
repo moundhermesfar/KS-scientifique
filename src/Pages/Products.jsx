@@ -25,7 +25,7 @@ const Products = () => {
     const fetchCategory = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/admin/categories/get-category/${id}`
+          `https://ks-scientifique-api.onrender.com0/admin/categories/get-category/${id}`
         );
         setCategory(response.data);
       } catch (error) {
@@ -40,7 +40,7 @@ const Products = () => {
     const fetchProductsByCategory = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/admin/products/get-products`
+          `https://ks-scientifique-api.onrender.com/admin/products/get-products`
         );
         setProducts(response.data.data);
       } catch (error) {

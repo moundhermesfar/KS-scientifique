@@ -14,7 +14,7 @@ const CreateProduct = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/admin/categories/get-categories"
+          "https://ks-scientifique-api.onrender.com/admin/categories/get-categories"
         );
         setCategories(response.data.data);
       } catch (error) {
@@ -39,7 +39,7 @@ const CreateProduct = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/admin/products/create-product",
+        "https://ks-scientifique-api.onrender.com/admin/products/create-product",
         formData
       );
       console.log(response.data);
@@ -112,7 +112,7 @@ const CreateProduct = () => {
           onChange={(e) => setFile(e.target.files[0])}
           className="mb-4 p-2 border border-gray-300 rounded-md w-full"
         />
-        <Link to="/admin/products/get-products">
+        <Link to="https://ks-scientifique-api.onrender.com/admin/products/get-products">
           <button
             onClick={handleCreate}
             className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer w-full"

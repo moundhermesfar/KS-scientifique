@@ -13,7 +13,7 @@ const GetProducts = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/admin/products/get-products"
+          "https://ks-scientifique-api.onrender.com/admin/products/get-products"
         );
 
         // Assuming the structure of your response is { count: number, data: array }
@@ -34,7 +34,7 @@ const GetProducts = () => {
   const confirmDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/admin/products/delete-product/${selectedProductId}`
+        `https://ks-scientifique-api.onrender.com/admin/products/delete-product/${selectedProductId}`
       );
       console.log(response.data);
       setShowDeleteModal(false);
@@ -88,7 +88,7 @@ const GetProducts = () => {
       {/* Add button to create a new product */}
       <div className="flex justify-center mt-20">
         <Link
-          to="/admin/products/create-product"
+          to="https://ks-scientifique-api.onrender.com/admin/products/create-product"
           className="bg-green-500 text-white p-2 rounded-md hover:bg-green-600 cursor-pointer"
         >
           Create New Product

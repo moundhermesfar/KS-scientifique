@@ -17,7 +17,7 @@ function Home() {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/admin/categories/get-categories"
+        "https://ks-scientifique-api.onrender.com/admin/categories/get-categories"
       );
       setCategories(response.data.data);
     } catch (error) {
