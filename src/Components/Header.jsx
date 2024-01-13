@@ -29,7 +29,7 @@ const Header = () => {
         <div className="text-white text-center text-4xl md:text-6xl lg:text-6xl max-md:text-4xl max-md:mt-10">
           La brillance du laboratoire libérée
         </div>
-        <div className="text-white text-center text-lg md:text-3xl max-w-[738px] mt-10 max-md:max-w-full max-md:mt-5">
+        <div className="p-5 text-white text-center text-lg md:text-3xl max-w-[738px] mt-10 max-md:max-w-full max-md:mt-5">
           Optimisez votre travail en laboratoire avec notre vente exclusive
           d'équipements et de consommables ! Découvrez des outils et fournitures
           de haute qualité pour des recherches de pointe. Offres limitées sur

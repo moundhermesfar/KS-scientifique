@@ -92,9 +92,9 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/admin" className="text-white">
+                  <Link to={"/admin"} className="text-white">
                     Admin
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
