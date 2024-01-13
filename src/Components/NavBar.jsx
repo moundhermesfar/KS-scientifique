@@ -67,7 +67,7 @@ const NavBar = () => {
             >
               <ul className="flex flex-col items-center pt-20">
                 <li className="mb-4">
-                  <Link to={"/"} className="text-white">
+                  <Link href="#" to={"/"} className="text-white">
                     Home
                   </Link>
                 </li>
@@ -106,7 +106,7 @@ const NavBar = () => {
       {!isMobile && (
         <ul className="lg:flex space-x-9 pr-20 hidden">
           <li>
-            <Link to={"/"} className="text-white hover:underline-red">
+            <Link href="#" to={"/"} className="text-white hover:underline-red">
               Home
             </Link>
           </li>
