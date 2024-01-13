@@ -11,7 +11,7 @@ const ProductDetails = ({ product, onClose }) => {
             className="w-full h-30 object-cover rounded-lg"
           />
         </div>
-        <div className="w-1/2 ml-4">
+        <div className="p-15 w-1/2 ml-4">
           <button
             className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
             onClick={onClose}
