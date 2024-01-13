@@ -2,7 +2,7 @@ import React from "react";
 
 const Propos = () => {
   return (
-    <section className="bg-black  text-center py-8 pb-20 pt-20">
+    <section id="why" className="bg-black  text-center py-8 pb-20 pt-20">
       <h2 className="text-3xl font-semibold text-red-500 mb-5">
         A propos de nous
       </h2>

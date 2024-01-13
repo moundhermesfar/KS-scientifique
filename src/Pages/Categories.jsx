@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Categories = ({ categories }) => {
   return (
-    <div className="mb-20 text-center flex flex-col items-center">
+    <div id="categories" className="mb-20 text-center flex flex-col items-center">
       <h2 className="mt-20 p-4 text-red-600 text-[32px] font-normal font-['DM Serif Display']">
         Catégories
       </h2>

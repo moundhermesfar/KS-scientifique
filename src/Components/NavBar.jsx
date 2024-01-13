@@ -67,27 +67,27 @@ const NavBar = () => {
             >
               <ul className="flex flex-col items-center pt-20">
                 <li className="mb-4">
-                  <a href="#" className="text-white">
+                  <Link to={"/"} className="text-white">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="text-white">
+                  <a href="#categories" className="text-white">
                     Categories
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="text-white">
+                  <a href="#about" className="text-white">
                     A propos de nous
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="text-white">
+                  <a href="#why" className="text-white">
                     Pourquoi KScientifique
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="text-white">
+                  <a href="#contact" className="text-white">
                     Contacts
                   </a>
                 </li>
@@ -106,27 +106,27 @@ const NavBar = () => {
       {!isMobile && (
         <ul className="lg:flex space-x-9 pr-20 hidden">
           <li>
-            <a href="#" className="text-white hover:underline-red">
+            <Link to={"/"} className="text-white hover:underline-red">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-white hover:underline-red">
+            <a href="#categories" className="text-white hover:underline-red">
               Categories
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:underline-red">
+            <a href="#about" className="text-white hover:underline-red">
               A propos de nous
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:underline-red">
+            <a href="#why" className="text-white hover:underline-red">
               Pourquoi KScientifique
             </a>
           </li>
           <li>
-            <a href="#" className="text-white hover:underline-red">
+            <a href="#contact" className="text-white hover:underline-red">
               Contacts
             </a>
           </li>
