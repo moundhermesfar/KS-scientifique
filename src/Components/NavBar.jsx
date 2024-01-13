@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo-img.png";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -130,9 +131,9 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a href="/admin" className="text-white">
+            <Link to={"/admin"} className="text-white">
               Admin
-            </a>
+            </Link>
           </li>
         </ul>
       )}
