@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400;700&display=swap");
+
+.font-serif {
+  font-family: "DM Serif Display", serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.hover\:underline-red:hover {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+/* Add this to your global styles or in your component-specific styles */
+.shadow-red {
+  box-shadow: 0 4px 6px -1px rgba(255, 0, 0, 0.1),
+    0 2px 4px -1px rgba(255, 0, 0, 0.06);
+}
