@@ -11,7 +11,10 @@ const Categories = ({ categories }) => {
       <hr className="bg-black border-t border-red-600 w-1/2 mx-auto border-solid border-b-2" />
       <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
         {categories.map((category) => (
-          <Link to={`/products/${category._id}`} key={category._id}>
+          <Link
+            to={`https://ks-scientifique-api.onrender.com/products/${category._id}`}
+            key={category._id}
+          >
             <Category key={category._id} category={category} />
           </Link>
         ))}
