@@ -25,7 +25,7 @@ const Products = () => {
     const fetchCategory = async () => {
       try {
         const response = await axios.get(
-          `https://ks-scientifique-api.onrender.com0/admin/categories/get-category/${id}`
+          `https://ks-scientifique-api.onrender.com/admin/categories/get-category/${id}`
         );
         setCategory(response.data);
       } catch (error) {
