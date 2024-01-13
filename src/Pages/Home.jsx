@@ -30,10 +30,8 @@ function Home() {
       <NavBar />
       <Header />
       <Categories categories={categories} />
-      {/* <hr className="bg-black border-t border-red-600 w-full mx-auto border-solid border-b-2" /> */}
       <Propos />
       <Pourquoi reasons={reasons} />
-      {/* <hr className="bg-black border-t border-red-600 w-full mx-auto border-solid border-b-2" /> */}
       <Footer />
     </div>
   );

@@ -5,7 +5,10 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="mt-20 shadow-sm bg-slate-950 text-white p-10 pt-12">
+    <footer
+      id="contact"
+      className="mt-20 shadow-sm bg-slate-950 text-white p-10 pt-12 flex flex-col justify-center items-center"
+    >
       <div className="text-center font-serif">
         <p className="text-4xl mb-10 mt-10">Contactez Nous</p>
       </div>
