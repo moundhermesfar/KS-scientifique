@@ -63,30 +63,30 @@ const NavBar = () => {
           {isMenuVisible && (
             <div
               id="mobileMenuContainer"
-              className="fixed top-0 left-0 h-full w-1/2 bg-red-600 z-20 transition-transform ease-in-out duration-300 transform translate-x-0"
+              className="fixed top-0 left-0 h-full w-1/2 bg-slate-950 z-20 transition-transform ease-in-out duration-300 transform translate-x-0"
             >
               <ul className="flex flex-col items-center pt-20">
-                <li className="mb-4">
+                <li className="mb-4" onClick={toggleMenu}>
                   <Link href="#" to={"/"} className="text-white">
                     Home
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4" onClick={toggleMenu}>
                   <a href="#categories" className="text-white">
                     Categories
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4" onClick={toggleMenu}>
                   <a href="#about" className="text-white">
                     A propos de nous
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4" onClick={toggleMenu}>
                   <a href="#why" className="text-white">
                     Pourquoi KScientifique
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4" onClick={toggleMenu}>
                   <a href="#contact" className="text-white">
                     Contacts
                   </a>
