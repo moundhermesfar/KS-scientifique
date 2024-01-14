@@ -14,7 +14,7 @@ const NavBar = () => {
 
     const handleClickOutsideMenu = (event) => {
       if (isMenuVisible && isMobile) {
-        const menuContainer = document.getElementById("root");
+        const menuContainer = document.getElementById("nav");
         if (menuContainer && !menuContainer.contains(event.target)) {
           setIsMenuVisible(false);
         }
@@ -43,6 +43,7 @@ const NavBar = () => {
 
   return (
     <nav
+      id="nav"
       className={`top-0 fixed w-full z-50 shadow-sm bg-slate-950 pr-6 py-2 h-20 ${
         isMobile
           ? "flex justify-between items-center"
@@ -65,6 +66,7 @@ const NavBar = () => {
               id="mobileMenuContainer"
               className="fixed top-0 left-0 h-full w-1/2 bg-slate-950 z-20 transition-transform ease-in-out duration-300 transform translate-x-0"
             >
+              <img src={logo} className="ml-10 h-20" />
               <ul className="flex flex-col items-center pt-20">
                 <li className="mb-4" onClick={toggleMenu}>
                   <Link href="#" to={"/"} className="text-white">

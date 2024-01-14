@@ -18,18 +18,18 @@ const Header = () => {
   }, [currentImage, images]);
 
   return (
-    <header className="flex-col overflow-hidden relative flex min-h-[1024px] w-full max-md:max-w-full z-10">
+    <header className="flex-col overflow-hidden relative flex min-h-[800px] w-full max-md:max-w-full z-10">
       <img
         loading="lazy"
         src={currentImage}
-        className="blur absolute h-full w-full object-cover object-center inset-0 max-h-full"
+        className="blur-[5px] absolute h-full w-full object-cover object-center inset-0 max-h-full"
         alt="Lab Image"
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center">
         <div className="text-white text-center text-4xl md:text-6xl lg:text-6xl max-md:text-4xl max-md:mt-10 shadow-lg">
           La brillance du laboratoire libérée
         </div>
-        <div className="p-5 text-white text-center text-lg md:text-3xl leading-relaxed max-w-[748px] mt-10 max-md:max-w-full max-md:mt-5">
+        <div className="p-5 text-white text-center text-lg md:text-3xl leading-relaxed max-w-[740px] mx-auto mt-10 max-md:max-w-full max-md:mt-5">
           Optimisez votre travail en laboratoire avec notre vente exclusive
           d'équipements et de consommables ! Découvrez des outils et fournitures
           de haute qualité pour des recherches de pointe. <br />
