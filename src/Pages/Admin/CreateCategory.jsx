@@ -53,7 +53,7 @@ const CreateCategory = () => {
           onChange={(e) => setFile(e.target.files[0])}
           className="mb-4 p-2 border border-gray-300 rounded-md w-full"
         />
-        <Link to="https://ks-scientifique-api.onrender.com/admin/categories/get-categories">
+        <Link to="/admin/categories/get-categories">
           <button
             onClick={handleUpload}
             className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer w-full"

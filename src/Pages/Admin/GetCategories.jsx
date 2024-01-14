@@ -67,7 +67,7 @@ const GetCategories = () => {
             )}
             <div className="flex justify-between">
               <Link
-                to={`https://ks-scientifique-api.onrender.com/admin/categories/update-category/${category._id}`}
+                to={`/admin/categories/update-category/${category._id}`}
                 className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-all duration-300"
               >
                 <FaEdit className="mr-2" /> Update
@@ -86,7 +86,7 @@ const GetCategories = () => {
       {/* Add button to create a new category */}
       <div className="flex justify-center mt-10">
         <Link
-          to="https://ks-scientifique-api.onrender.com/admin/categories/create-category"
+          to="/admin/categories/create-category"
           className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-all duration-300"
         >
           Create New Category

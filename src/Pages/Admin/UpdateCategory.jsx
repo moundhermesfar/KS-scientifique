@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const UpdateCategory = () => {
   const { id } = useParams();
@@ -15,7 +15,7 @@ const UpdateCategory = () => {
   const fetchCategoryDetails = async () => {
     try {
       const response = await axios.get(
-        `https://ks-scientifique-api.onrender.com/admin/get-category/${id}`
+        `https://ks-scientifique-api.onrender.com/admin/categories/get-category/${id}`
       );
       setCategoryDetails(response.data);
       setCategoryName(response.data.name);
@@ -35,7 +35,7 @@ const UpdateCategory = () => {
 
     try {
       const response = await axios.put(
-        `https://ks-scientifique-api.onrender.com/admin/update-category/${id}`,
+        `https://ks-scientifique-api.onrender.com/admin/categories/update-category/${id}`,
         formData,
         {
           headers: {
@@ -76,12 +76,14 @@ const UpdateCategory = () => {
           onChange={(e) => setFile(e.target.files[0])}
           className="mb-4 p-2 border border-gray-300 rounded-md w-full"
         />
-        <button
-          onClick={handleUpdate}
-          className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer w-full"
-        >
-          Update
-        </button>
+        <Link to="/admin/categories/get-categories">
+          <button
+            onClick={handleUpdate}
+            className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer w-full"
+          >
+            Update
+          </button>
+        </Link>
       </div>
     </div>
   );

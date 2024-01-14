@@ -6,7 +6,6 @@ import GetCategories from "./Pages/Admin/GetCategories";
 import UpdateCategory from "./Pages/Admin/UpdateCategory";
 import Products from "./Pages/Products";
 import CreateProduct from "./Pages/Admin/CreateProduct";
-import ProductsByCategory from "./Pages/Admin/GetProducts";
 import Admin from "./Pages/Admin/Admin";
 import GetProducts from "./Pages/Admin/GetProducts";
 
@@ -26,10 +25,6 @@ const App = () => {
         <Route path="products/">
           <Route path="get-products" element={<GetProducts />} />
           <Route path="create-product" element={<CreateProduct />} />
-          {/* <Route
-            path="products-by-category/:category"
-            element={<ProductsByCategory />}
-          /> */}
         </Route>
       </Route>
     </Routes>

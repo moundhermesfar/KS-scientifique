@@ -69,7 +69,7 @@ const GetProducts = () => {
             )}
             <div className="flex justify-between items-center">
               <Link
-                to={`/admin/update-product/${product._id}`}
+                to={`/admin/products/update-product/${product._id}`}
                 className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer"
               >
                 <FaEdit className="mr-2" /> Update
@@ -88,7 +88,7 @@ const GetProducts = () => {
       {/* Add button to create a new product */}
       <div className="flex justify-center mt-20">
         <Link
-          to="https://ks-scientifique-api.onrender.com/admin/products/create-product"
+          to="/admin/products/create-product"
           className="bg-green-500 text-white p-2 rounded-md hover:bg-green-600 cursor-pointer"
         >
           Create New Product
