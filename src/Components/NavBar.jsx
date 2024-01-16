@@ -51,10 +51,10 @@ const NavBar = () => {
       {isMobile && (
         <>
           <button
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-none text-[23px]"
             onClick={toggleMenu}
           >
-            {isMenuVisible ? "✖ Close" : "☰ Menu"}
+            {isMenuVisible ? "✖" : "☰"}
           </button>
 
           {isMenuVisible && (
