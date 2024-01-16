@@ -16,7 +16,6 @@ const GetProducts = () => {
           "https://ks-scientifique-api.onrender.com/admin/products/get-products"
         );
 
-        // Assuming the structure of your response is { count: number, data: array }
         setProducts(response.data.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -85,7 +84,6 @@ const GetProducts = () => {
         ))}
       </ul>
 
-      {/* Add button to create a new product */}
       <div className="flex justify-center mt-20">
         <Link
           to="/admin/products/create-product"
@@ -95,7 +93,6 @@ const GetProducts = () => {
         </Link>
       </div>
 
-      {/* Delete confirmation modal */}
       {showDeleteModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-md">

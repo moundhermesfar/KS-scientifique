@@ -83,7 +83,6 @@ const GetCategories = () => {
         ))}
       </div>
 
-      {/* Add button to create a new category */}
       <div className="flex justify-center mt-10">
         <Link
           to="/admin/categories/create-category"
@@ -93,7 +92,6 @@ const GetCategories = () => {
         </Link>
       </div>
 
-      {/* Delete confirmation modal */}
       {showDeleteModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-md">

@@ -21,16 +21,12 @@ const NavBar = () => {
       }
     };
 
-    // Initial check
     checkIsMobile();
 
-    // Listen for changes in the viewport size
     window.addEventListener("resize", checkIsMobile);
 
-    // Listen for clicks outside the menu
     window.addEventListener("click", handleClickOutsideMenu);
 
-    // Clean up the event listeners when the component unmounts
     return () => {
       window.removeEventListener("resize", checkIsMobile);
       window.removeEventListener("click", handleClickOutsideMenu);

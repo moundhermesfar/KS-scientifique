@@ -51,12 +51,10 @@ const Products = () => {
     fetchProductsByCategory();
   }, []);
 
-  // Filter products based on the category name
   const filteredProducts = products.filter(
     (product) => product.category === category?.name
   );
 
-  // Display products in the UI
   return (
     <>
       <NavBar />

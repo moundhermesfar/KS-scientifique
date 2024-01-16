@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const ProductDetails = ({ product, onClose }) => {
+  const modalRef = useRef();
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      onClose();
+    }
+  };
+
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscapeKey);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [onClose]);
+
   return (
     <div className="fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50">
-      <div className="m-5 relative bg-white w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-lg p-8 flex">
+      <div
+        ref={modalRef}
+        className="m-5 relative bg-white w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-lg p-8 flex"
+      >
         <div className="w-1/2">
           <img
             src={`data:${product.img.contentType};base64,${product.img.data}`}
@@ -11,7 +38,9 @@ const ProductDetails = ({ product, onClose }) => {
             className="w-full h-30 object-cover rounded-lg"
           />
         </div>
-        <div className="p-15 w-1/2 ml-4">
+        <div className="p-15 w-1/2 ml-4 text-center">
+          {" "}
+          {/* Added text-center class */}
           <button
             className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
             onClick={onClose}
@@ -42,12 +71,6 @@ const ProductDetails = ({ product, onClose }) => {
           <p className="text-gray-700">
             <span className="font-semibold">Contact:</span> +213 540 30 54 96
           </p>
-          <button
-            className="mt-6 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 focus:outline-none"
-            onClick={onClose}
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
