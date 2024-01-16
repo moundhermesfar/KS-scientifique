@@ -8,20 +8,19 @@ const GetProducts = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
 
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get(
+        "https://ks-scientifique-api.onrender.com/admin/products/get-products"
+      );
+
+      setProducts(response.data.data);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
+
   useEffect(() => {
-    // Fetch products based on categoryId
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(
-          "https://ks-scientifique-api.onrender.com/admin/products/get-products"
-        );
-
-        setProducts(response.data.data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
     fetchProducts();
   }, []);
 
