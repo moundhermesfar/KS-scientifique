@@ -25,7 +25,7 @@ const Header = () => {
         className="blur-[5px] absolute h-full w-full object-cover object-center inset-0 max-h-full"
         alt="Lab Image"
       />
-      <div className="absolute inset-0 flex flex-col justify-center items-center">
+      <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
         <div className="text-white text-center text-4xl md:text-6xl lg:text-6xl max-md:text-4xl max-md:mt-10 shadow-lg">
           La brillance du laboratoire libérée
         </div>
