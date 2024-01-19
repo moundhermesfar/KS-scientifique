@@ -50,7 +50,7 @@ const Propos = () => {
 
   return (
     <section
-      id="#about"
+      id="about"
       className="mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-800 via-blue-400 to-blue-200"
     >
       <div className="pl-5 text-left">

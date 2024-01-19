@@ -17,15 +17,31 @@ const Header = () => {
     return () => clearInterval(interval);
   }, [currentImage, images]);
 
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const parallaxValue = scrollPosition * 0.5; // Adjust this value for the desired parallax effect
+    document.getElementById(
+      "parallaxImage"
+    ).style.transform = `translateY(${parallaxValue}px)`;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header className="flex-col overflow-hidden relative flex min-h-[800px] w-full max-md:max-w-full z-10">
       <img
+        id="parallaxImage"
         loading="lazy"
         src={currentImage}
-        className="blur-[5px] absolute h-full w-full object-cover object-center inset-0 max-h-full"
+        className="blur-[5px] absolute h-full w-full object-cover object-center inset-0 max-h-full transition-transform duration-300"
         alt="Lab Image"
       />
-      <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
+      <div className="absolute inset-0 flex flex-col justify-center items-center bg-gray-700 bg-opacity-50">
         <div className="text-white text-center text-4xl md:text-6xl lg:text-6xl max-md:text-4xl max-md:mt-10 shadow-lg">
           La brillance du laboratoire libérée
         </div>
