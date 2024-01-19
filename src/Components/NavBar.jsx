@@ -81,7 +81,7 @@ const NavBar = () => {
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
                   <a href="#why" className="text-white">
-                    Pourquoi KScientifique
+                    Pourquoi KS Scientifique
                   </a>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
@@ -120,7 +120,7 @@ const NavBar = () => {
           </li>
           <li>
             <a href="##why" className="text-white hover:underline">
-              Pourquoi KScientifique
+              Pourquoi KS Scientifique
             </a>
           </li>
           <li>

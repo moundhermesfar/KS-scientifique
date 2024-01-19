@@ -51,23 +51,22 @@ const Propos = () => {
   return (
     <section
       id="about"
-      className="mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-800 via-blue-400 to-blue-200"
+      className="h-[650px] mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-800 via-blue-400 to-blue-200"
     >
-      <div className="pl-5 text-left">
-        <h2 className="pt-20 ml-[5%] text-3xl font-semibold text-white mb-5">
-          A propos de nous
-        </h2>
-        <hr className="mb-5 bg-black border-t border-white w-[60%] mx-auto border-solid border-b-2 ml-[5%] mr-[95%]" />
-        <p className="text-[25px] text-lg text-white ml-[5%] max-w-[599px] text-left">
-          Bienvenue chez KS scientifique, votre partenaire pour l'excellence en
-          laboratoire. Passionnés d'innovation scientifique, nous offrons des
-          équipements et consommables de qualité supérieure. Avec des offres
-          exclusives, KS scientifique élève chaque expérience en laboratoire.
-          Rejoignez-nous pour découvrir l'excellence scientifique!
+      <div className="text-left flex flex-col justify-center max-w-[599px] mx-auto text-white">
+        <h2 className="text-4xl font-semibold mb-5">A propos de nous</h2>
+        <hr className="mr-[95%] mb-5 bg-black border-t border-white w-[60%] mx-auto border-solid border-b-2" />
+        <p className="text-lg lg:text-xl">
+          Bienvenue chez <strong>KS Scientifique</strong>, votre partenaire pour
+          l'excellence en laboratoire. Passionnés d'innovation scientifique,
+          nous offrons des équipements et consommables de qualité supérieure.
+          Avec des offres exclusives, <strong>KS Scientifique</strong> élève
+          chaque expérience en laboratoire. Rejoignez-nous pour découvrir
+          l'excellence scientifique!
         </p>
       </div>
       <div className="ml-auto">
-        <img src={propos} className="w-[550px] h-[450px]" alt="A propos" />
+        <img src={propos} className="w-[650px] h-[650px]" alt="A propos" />
       </div>
     </section>
   );

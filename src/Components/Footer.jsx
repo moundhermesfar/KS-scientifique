@@ -28,7 +28,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="mb-4 sm:mb-0 flex justify-center items-center">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=100050354096175&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={faFacebook}
               size="2x"
@@ -37,7 +37,7 @@ const Footer = () => {
             />
           </a>
           <p className="ml-2 text-sm sm:text-lg font-medium text-white">
-            kscientifique
+            kS Scientifique
           </p>
         </div>
         <div className="flex justify-center items-center">
