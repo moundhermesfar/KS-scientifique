@@ -42,7 +42,7 @@ const Header = () => {
         alt="Lab Image"
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center bg-gray-700 bg-opacity-50">
-        <div className="text-white text-center text-4xl md:text-6xl lg:text-6xl max-md:text-4xl max-md:mt-10 shadow-lg">
+        <div className="text-white text-center text-4xl md:text-6xl lg:text-6xl max-md:text-4xl max-md:mt-10">
           La brillance du laboratoire libérée
         </div>
         <div className="p-4 text-white text-center text-lg md:text-3xl leading-relaxed max-w-[740px] mx-auto mt-10 max-md:max-w-full max-md:mt-5">
