@@ -29,12 +29,13 @@ const Header = () => {
         <div className="text-white text-center text-4xl md:text-6xl lg:text-6xl max-md:text-4xl max-md:mt-10 shadow-lg">
           La brillance du laboratoire libérée
         </div>
-        <div className="p-5 text-white text-center text-lg md:text-3xl leading-relaxed max-w-[740px] mx-auto mt-10 max-md:max-w-full max-md:mt-5">
+        <div className="p-4 text-white text-center text-lg md:text-3xl leading-relaxed max-w-[740px] mx-auto mt-10 max-md:max-w-full max-md:mt-5">
           Optimisez votre travail en laboratoire avec notre vente exclusive
           d'équipements et de consommables ! Découvrez des outils et fournitures
           de haute qualité pour des recherches de pointe. <br />
-          Offres limitées sur des équipements essentiels. Améliorez votre
-          expérience en laboratoire – faites vos achats maintenant !
+          Offres limitées sur des équipements essentiels.
+          <br /> Améliorez votre expérience en laboratoire – faites vos achats
+          maintenant !
         </div>
       </div>
     </header>

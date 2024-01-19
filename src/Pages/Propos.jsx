@@ -27,7 +27,6 @@ const Propos = () => {
         id="about"
         className="pt-10 mt-10 mb-10 flex flex-col bg-gradient-to-r from-blue-800 via-blue-600 to-blue-200"
       >
-        {/* Mobile view JSX */}
         <div className="text-center p-5">
           <h2 className="text-3xl font-semibold text-white mb-3">
             A propos de nous
@@ -49,11 +48,10 @@ const Propos = () => {
     );
   }
 
-  // Desktop view JSX (default)
   return (
     <section
-      id="about"
-      className="mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-800 via-blue-600 to-blue-200"
+      id="#about"
+      className="mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-800 via-blue-400 to-blue-200"
     >
       <div className="pl-5 text-left">
         <h2 className="pt-20 ml-[5%] text-3xl font-semibold text-white mb-5">

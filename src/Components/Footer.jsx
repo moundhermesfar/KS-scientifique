@@ -7,8 +7,8 @@ import logo from "../assets/logo-img.png";
 const Footer = () => {
   return (
     <footer
-      id="contact"
-      className="mt-20 shadow-sm bg-blue-900 text-white flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
+      id="#contact"
+      className="mt-20 pt-20 shadow-sm bg-blue-900 text-white flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
     >
       <div className="text-center font-serif mb-6">
         <p className="text-2xl sm:text-4xl">Contactez Nous</p>
@@ -56,9 +56,6 @@ const Footer = () => {
       </div>
       <div className="flex flex-col justify-center items-center mt-4 sm:mt-10">
         <img className="w-16 sm:w-24" src={logo} alt="Logo" />
-        <p className="text-center text-red-400 text-sm sm:text-base">
-          KS scientifique
-        </p>
       </div>
     </footer>
   );

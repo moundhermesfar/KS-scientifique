@@ -70,7 +70,7 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
-                  <a href="#categories" className="text-white">
+                  <a href="/#categories" className="text-white">
                     Categories
                   </a>
                 </li>
@@ -109,22 +109,22 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <a href="#categories" className="text-white hover:underline">
+            <a href="##categories" className="text-white hover:underline">
               Categories
             </a>
           </li>
           <li>
-            <a href="#about" className="text-white hover:underline">
+            <a href="##about" className="text-white hover:underline">
               A propos de nous
             </a>
           </li>
           <li>
-            <a href="#why" className="text-white hover:underline">
+            <a href="##why" className="text-white hover:underline">
               Pourquoi KScientifique
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-white hover:underline">
+            <a href="##contact" className="text-white hover:underline">
               Contacts
             </a>
           </li>
