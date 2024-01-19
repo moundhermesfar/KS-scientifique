@@ -29,18 +29,16 @@ const ProductDetails = ({ product, onClose }) => {
     <div className="fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div
         ref={modalRef}
-        className="m-5 relative bg-white w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-lg p-8 flex"
+        className="m-10 relative bg-gradient-to-r from-blue-100 via-blue-200 to-blue-400 w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-lg p-4 flex flex-col md:flex-row"
       >
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2 mb-2 md:mb-0">
           <img
             src={`data:${product.img.contentType};base64,${product.img.data}`}
             alt={product.name}
-            className="w-full h-30 object-cover rounded-lg"
+            className="w-full md:h-30 object-cover rounded-lg h-30 md:h-full"
           />
         </div>
-        <div className="p-15 w-1/2 ml-4 text-center">
-          {" "}
-          {/* Added text-center class */}
+        <div className="p-4 md:p-8 w-full md:w-1/2 text-center">
           <button
             className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
             onClick={onClose}
