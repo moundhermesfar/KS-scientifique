@@ -33,7 +33,10 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex-col overflow-hidden relative flex min-h-[800px] w-full max-md:max-w-full z-10">
+    <header
+      id="#home"
+      className="flex-col overflow-hidden relative flex min-h-[800px] w-full max-md:max-w-full z-10"
+    >
       <img
         id="parallaxImage"
         loading="lazy"

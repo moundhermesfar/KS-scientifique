@@ -65,7 +65,7 @@ const NavBar = () => {
               <img src={logo} className="ml-10 h-20" />
               <ul className="flex flex-col items-center pt-20">
                 <li className="mb-4" onClick={toggleMenu}>
-                  <Link href="#" to={"/"} className="text-white">
+                  <Link href="#home" to={"/"} className="text-white">
                     Home
                   </Link>
                 </li>
@@ -104,9 +104,9 @@ const NavBar = () => {
       {!isMobile && (
         <ul className="lg:flex space-x-9 pr-20 hidden">
           <li>
-            <Link href="#" to={"/"} className="text-white hover:underline">
+            <a className="text-white hover:underline" href="##home">
               Home
-            </Link>
+            </a>
           </li>
           <li>
             <a href="##categories" className="text-white hover:underline">
