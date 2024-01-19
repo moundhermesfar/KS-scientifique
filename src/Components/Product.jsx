@@ -8,7 +8,7 @@ const Product = ({ product, onClick }) => {
       className="rounded-lg p-5 m-4 relative text-center hover:shadow-xl"
       onClick={onClick}
     >
-      <div className="bg-indigo-50 shadow-md flex items-center justify-center rounded-lg">
+      <div className="bg-blue-400 shadow-md flex items-center justify-center rounded-lg">
         <img
           src={`data:${product.img.contentType};base64,${product.img.data}`}
           alt={name}

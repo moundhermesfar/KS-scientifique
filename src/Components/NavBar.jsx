@@ -40,7 +40,7 @@ const NavBar = () => {
   return (
     <nav
       id="nav"
-      className={`top-0 fixed w-full z-50 shadow-sm bg-gradient-to-r from-transparent  to-blue-700 via-blue-500 pr-6 py-2 h-20 ${
+      className={`top-0 fixed w-full z-50 shadow-sm bg-gradient-to-r from-blue-100  to-blue-700 via-blue-500 pr-6 py-2 h-20 ${
         isMobile
           ? "flex justify-between items-center"
           : "mx-auto flex justify-between items-center"
@@ -60,7 +60,7 @@ const NavBar = () => {
           {isMenuVisible && (
             <div
               id="mobileMenuContainer"
-              className="fixed top-0 left-0 h-full w-1/2 bg-blue-600 z-20 transition-transform ease-in-out duration-300 transform translate-x-0"
+              className="fixed top-0 left-0 h-full w-1/2 bg-blue-900 z-20 transition-transform ease-in-out duration-300 transform translate-x-0"
             >
               <img src={logo} className="ml-10 h-20" />
               <ul className="flex flex-col items-center pt-20">
