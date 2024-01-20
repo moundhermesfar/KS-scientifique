@@ -9,11 +9,13 @@ import CreateProduct from "./Pages/Admin/CreateProduct";
 import Admin from "./Pages/Admin/Admin";
 import GetProducts from "./Pages/Admin/GetProducts";
 import UpdateProduct from "./Pages/Admin/UpdateProduct";
+import Contact from "./Pages/Contact";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/products/:id" element={<Products />} />
 
       <Route path="/admin/">

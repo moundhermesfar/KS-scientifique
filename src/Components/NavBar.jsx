@@ -65,9 +65,9 @@ const NavBar = () => {
               <img src={logo} className="ml-10 h-20" />
               <ul className="flex flex-col items-center pt-20">
                 <li className="mb-4" onClick={toggleMenu}>
-                  <Link href="#home" to={"/"} className="text-white">
+                  <a className="text-white hover:underline" href="##home">
                     Home
-                  </Link>
+                  </a>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
                   <a href="/#categories" className="text-white">
@@ -124,7 +124,7 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a href="##contact" className="text-white hover:underline">
+            <a href="/#contact" className="text-white hover:underline">
               Contacts
             </a>
           </li>

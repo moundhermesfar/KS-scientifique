@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer
       id="#contact"
-      className="mt-20 pt-20 shadow-sm bg-blue-900 text-white flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
+      className="pt-20 shadow-sm bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 text-white flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
     >
       <div className="text-center font-serif mb-6">
         <p className="text-2xl sm:text-4xl">Contactez Nous</p>
@@ -28,7 +28,11 @@ const Footer = () => {
           </p>
         </div>
         <div className="mb-4 sm:mb-0 flex justify-center items-center">
-          <a href="https://www.facebook.com/profile.php?id=100050354096175&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.facebook.com/profile.php?id=100050354096175&mibextid=LQQJ4d"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon
               icon={faFacebook}
               size="2x"
