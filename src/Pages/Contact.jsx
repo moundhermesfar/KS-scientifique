@@ -35,16 +35,16 @@ const Contact = () => {
     // Use template literals for cleaner code
     emailjs
       .send(
-        "service_weu3wsh",
-        "template_ovg6wdp",
+        "service_6rc8cet",
+        "template_41o8m8b",
         {
           from_name: form.name,
-          to_name: "Kebiche Fouez",
+          to_name: "Moundher Mesfar",
           from_email: form.email,
-          to_email: "kebichefouez@gmail.com",
+          to_email: "mesfarmounether@gmail.com",
           message: form.message,
         },
-        "aEOPN0-ntObx0m2NS"
+        "1SlXE_8toabLDo0m6"
       )
       .then(
         (response) => {
