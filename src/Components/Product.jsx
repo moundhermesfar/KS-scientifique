@@ -5,7 +5,7 @@ const Product = ({ product, onClick }) => {
 
   return (
     <div
-      className="rounded-lg p-5 m-4 relative text-center hover:shadow-xl"
+      className="mb-20 rounded-lg p-5 m-4 relative text-center hover:shadow-xl"
       onClick={onClick}
     >
       <div className="bg-blue-400 shadow-md flex items-center justify-center rounded-lg">
