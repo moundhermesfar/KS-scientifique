@@ -6,8 +6,7 @@ const reasons = [
   {
     id: 1,
     title: "Innovation Redéfinie",
-    paragraph:
-      "Chez KS scientifique, nous sommes des pionniers de l'innovation en laboratoire. Notre engagement à rester à la pointe des avancées technologiques garantit votre accès à des équipements les plus récents et les plus avancés, donnant ainsi à vos recherches un avantage compétitif.",
+    paragraph: `Chez KS scientifique, nous sommes des pionniers de l'innovation en laboratoire. Notre engagement à rester à la pointe des avancées technologiques garantit votre accès à des équipements les plus récents, les plus avancés et les plus performants, donnant ainsi à vos recherches un avantage compétitif.`,
     pic: img1,
   },
   {
