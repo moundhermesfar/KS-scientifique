@@ -70,22 +70,22 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
-                  <a href="/#categories" className="text-white">
+                  <a href="/##categories" className="text-white">
                     Categories
                   </a>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
-                  <a href="#about" className="text-white">
+                  <a href="##about" className="text-white">
                     A propos de nous
                   </a>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
-                  <a href="#why" className="text-white">
+                  <a href="##why" className="text-white">
                     Pourquoi KS Scientifique
                   </a>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
-                  <a href="#contact" className="text-white">
+                  <a href="##contact" className="text-white">
                     Contacts
                   </a>
                 </li>
