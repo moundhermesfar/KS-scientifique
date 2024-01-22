@@ -8,10 +8,9 @@ export const PreLoader = () => {
   return (
     <div className="bg-gradient-to-r from-blue-200 via-blue-600 to-blue-800 preloader">
       <div className="texts-container">
-        <span>Welcome</span>
-        <span>to</span>
-        <span>our</span>
-        <span>website</span>
+        <span>Bienvenue</span>
+        <span>chez</span>
+        <span>KS Scientifique</span>
       </div>
     </div>
   );
