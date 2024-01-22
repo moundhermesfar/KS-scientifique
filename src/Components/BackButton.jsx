@@ -11,7 +11,7 @@ const BackButton = ({ destination }) => {
   };
 
   return (
-    <div className="m-5 flex">
+    <div className="fixed m-5 flex">
       <button
         onClick={handleClicked}
         className="bg-red-600 text-white px-4 py-1 rounded-1g w-fit"
