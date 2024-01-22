@@ -1,10 +1,11 @@
 import React from "react";
 import Category from "../Components/Category";
 import { Link } from "react-router-dom";
-import { fadeIn, textVariant } from "../utils/motion";
+import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
+import Spinner from "../Components/Spinner";
 
-const Categories = ({ categories }) => {
+const Categories = ({ categories, loading }) => {
   return (
     <div
       id="#categories"
@@ -16,13 +17,17 @@ const Categories = ({ categories }) => {
         </h2>
       </motion.div>
       <hr className="bg-black border-t border-red-400 w-1/2 mx-auto border-solid border-b-2" />
-      <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-        {categories.map((category, index) => (
-          <Link to={`/products/${category._id}`} key={category._id}>
-            <Category key={category._id} index={index} category={category} />
-          </Link>
-        ))}
-      </div>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+          {categories.map((category, index) => (
+            <Link to={`/products/${category._id}`} key={category._id}>
+              <Category key={category._id} index={index} category={category} />
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

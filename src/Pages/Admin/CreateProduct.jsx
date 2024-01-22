@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import BackButton from "../../Components/BackButton";
 
 const CreateProduct = () => {
   const [productName, setProductName] = useState("");
@@ -9,6 +10,16 @@ const CreateProduct = () => {
   const [file, setFile] = useState("");
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const auth = location.state?.auth || false;
+
+  useEffect(() => {
+    if (!auth) {
+      navigate("/admin/login");
+    }
+  }, [auth, navigate]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -43,8 +54,10 @@ const CreateProduct = () => {
         formData
       );
       console.log(response.data);
+      navigate("/admin/products/get-products", { state: { auth: true } });
     } catch (error) {
       console.error(error);
+      alert("Something went wrong, please try again");
     }
   };
 
@@ -58,70 +71,71 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-4 text-center">
-          Create Product
-        </h2>
-        <div className="mb-4">
-          <label
-            htmlFor="category"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Category
-          </label>
-          <select
-            id="category"
-            name="category"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-          >
-            <option value="" disabled>
-              Select a category
-            </option>
-            {categories.map((category) => (
-              <option key={category._id} value={category.name}>
-                {category.name}
+    <>
+      <BackButton destination={"/admin/products/get-products"} />
+      <div className="flex items-center justify-center h-screen">
+        <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-center">
+            Create Product
+          </h2>
+          <div className="mb-4">
+            <label
+              htmlFor="category"
+              className="block text-sm font-medium text-gray-600"
+            >
+              Category
+            </label>
+            <select
+              id="category"
+              name="category"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            >
+              <option value="" disabled>
+                Select a category
               </option>
-            ))}
-          </select>
-        </div>
-        <input
-          type="text"
-          placeholder="Product Name"
-          value={productName}
-          onChange={(e) => setProductName(e.target.value)}
-          className="mb-4 p-2 border border-gray-300 rounded-md w-full"
-        />
-        <input
-          type="number"
-          placeholder="Product Price"
-          value={productPrice}
-          onChange={(e) => setProductPrice(e.target.value)}
-          className="mb-4 p-2 border border-gray-300 rounded-md w-full"
-        />
-        <textarea
-          placeholder="Product Description"
-          value={productDescription}
-          onChange={(e) => setProductDescription(e.target.value)}
-          className="mb-4 p-2 border border-gray-300 rounded-md w-full"
-        />
-        <input
-          type="file"
-          onChange={(e) => setFile(e.target.files[0])}
-          className="mb-4 p-2 border border-gray-300 rounded-md w-full"
-        />
-        <Link to="/admin/products/get-products">
+              {categories.map((category) => (
+                <option key={category._id} value={category.name}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <input
+            type="text"
+            placeholder="Product Name"
+            value={productName}
+            onChange={(e) => setProductName(e.target.value)}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
+          <input
+            type="number"
+            placeholder="Product Price"
+            value={productPrice}
+            onChange={(e) => setProductPrice(e.target.value)}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
+          <textarea
+            placeholder="Product Description"
+            value={productDescription}
+            onChange={(e) => setProductDescription(e.target.value)}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
+          <input
+            type="file"
+            onChange={(e) => setFile(e.target.files[0])}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
           <button
             onClick={handleCreate}
             className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer w-full"
           >
             Create
           </button>
-        </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -24,9 +24,35 @@ Add this to your global styles or in your component-specific styles */
     0 2px 4px -1px rgba(255, 0, 0, 0.06);
 } */
 
-body{
+body {
   padding: 0;
   margin: 0;
 }
 
+.preloader {
+  height: 100vh;
+  width: 100%;
+  /* background-color: blue-200; */
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
+.preloader .texts-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 280px;
+  font-size: 20px;
+  font-weight: 800;
+  overflow: hidden;
+  color: #fff;
+}

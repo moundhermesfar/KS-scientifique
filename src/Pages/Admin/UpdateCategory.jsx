@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import BackButton from "../../Components/BackButton";
 
 const UpdateCategory = () => {
   const { id } = useParams();
   const [categoryName, setCategoryName] = useState("");
   const [file, setFile] = useState("");
   const [categoryDetails, setCategoryDetails] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCategoryDetails();
@@ -43,9 +45,11 @@ const UpdateCategory = () => {
           },
         }
       );
+      navigate("/admin/categories/get-categories", { state: { auth: true } });
       console.log(response.data);
     } catch (error) {
       console.error("Error updating category:", error);
+      alert("Something went wrong, pleae try again");
     }
   };
 
@@ -59,33 +63,34 @@ const UpdateCategory = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-4 text-center">
-          Update Category
-        </h2>
-        <input
-          type="text"
-          placeholder="Category Name"
-          value={categoryName}
-          onChange={(e) => setCategoryName(e.target.value)}
-          className="mb-4 p-2 border border-gray-300 rounded-md w-full"
-        />
-        <input
-          type="file"
-          onChange={(e) => setFile(e.target.files[0])}
-          className="mb-4 p-2 border border-gray-300 rounded-md w-full"
-        />
-        <Link to="/admin/categories/get-categories">
+    <>
+      <BackButton destination={"/admin/categories/get-categories"} />
+      <div className="flex items-center justify-center h-screen">
+        <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-center">
+            Update Category
+          </h2>
+          <input
+            type="text"
+            placeholder="Category Name"
+            value={categoryName}
+            onChange={(e) => setCategoryName(e.target.value)}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
+          <input
+            type="file"
+            onChange={(e) => setFile(e.target.files[0])}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
           <button
             onClick={handleUpdate}
             className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 cursor-pointer w-full"
           >
             Update
           </button>
-        </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

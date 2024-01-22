@@ -10,6 +10,7 @@ import Admin from "./Pages/Admin/Admin";
 import GetProducts from "./Pages/Admin/GetProducts";
 import UpdateProduct from "./Pages/Admin/UpdateProduct";
 import Contact from "./Pages/Contact";
+import Login from "./Pages/Admin/Login";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/products/:id" element={<Products />} />
 
       <Route path="/admin/">
+        <Route path="login" element={<Login />} />
         <Route path="" element={<Admin />} />
         <Route path="categories/">
           <Route path="update-category/:id" element={<UpdateCategory />} />
