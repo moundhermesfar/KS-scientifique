@@ -10,7 +10,8 @@ export const PreLoader = () => {
       <div className="texts-container">
         <span>Bienvenue</span>
         <span>chez</span>
-        <span>KS Scientifique</span>
+        <span className="text-red-600 text-2xl font-bold font-serif">KS</span>
+        <span>Scientifique</span>
       </div>
     </div>
   );
