@@ -46,8 +46,9 @@ const NavBar = () => {
           : "mx-auto flex justify-between items-center"
       }`}
     >
-      <img className="w-24 ml-4" src={logo} alt="Logo" />
-
+      <a href="##home">
+        <img className="w-24 ml-4" src={logo} alt="Logo" />
+      </a>
       {isMobile && (
         <>
           <button
@@ -56,13 +57,14 @@ const NavBar = () => {
           >
             {isMenuVisible ? "✖" : "☰"}
           </button>
-
           {isMenuVisible && (
             <div
               id="mobileMenuContainer"
               className="fixed top-0 left-0 h-full w-1/2 bg-blue-800 z-20 transition-transform ease-in-out duration-300 transform translate-x-0"
             >
-              <img src={logo} className="ml-10 h-20" />
+              <a href="##home">
+                <img src={logo} className="ml-10 h-20" />
+              </a>
               <ul className="flex flex-col items-center pt-20">
                 <li className="mb-4" onClick={toggleMenu}>
                   <a className="text-white hover:underline" href="##home">
@@ -85,7 +87,7 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li className="mb-4" onClick={toggleMenu}>
-                  <a href="##contact" className="text-white">
+                  <a href="/#contact" className="text-white">
                     Contacts
                   </a>
                 </li>
@@ -100,7 +102,6 @@ const NavBar = () => {
         </>
       )}
 
-      {/* Desktop Menu */}
       {!isMobile && (
         <ul className="lg:flex space-x-9 pr-20 hidden">
           <li>

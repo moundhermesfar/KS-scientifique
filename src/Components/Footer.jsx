@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer
       id="#contact"
-      className="pt-20 shadow-sm bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 text-white flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
+      className="pt-20 shadow-sm bg-gradient-to-r from-blue-700 via-blue-900 to-black text-white flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
     >
       <div className="text-center font-serif mb-6">
         <p className="text-2xl sm:text-4xl">Contactez Nous</p>

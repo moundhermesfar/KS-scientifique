@@ -20,7 +20,7 @@ const reasons = [
     id: 3,
     title: "Offres Exclusives pour l'Excellence Scientifique",
     paragraph:
-      "KS scientifique va au-delà de la simple fourniture de produits ; nous valorisons votre parcours scientifique. Nos offres exclusives et promotions sont conçues pour soutenir vos efforts de recherche, faisant de nous non seulement un fournisseur, mais un partenaire stratégique dans votre quête d'excellence en laboratoire.",
+      "KS scientifique va au-delà de la simple fourniture de produits, nous valorisons votre parcours scientifique. Nos offres exclusives et promotions sont conçues pour soutenir vos efforts de recherche, faisant de nous non seulement un fournisseur, mais un partenaire stratégique dans votre quête d'excellence en laboratoire.",
     pic: img3,
   },
 ];
