@@ -12,10 +12,15 @@ import PreLoader from "../Components/PreLoader";
 function Home() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isPreLoading, setPreLoading] = useState(false);
 
   useEffect(() => {
     fetchCategories();
     setLoading(true);
+    // setPreLoading(true);
+    setTimeout(() => {
+      setPreLoading(false);
+    }, 10000);
   }, []);
 
   const fetchCategories = async () => {
@@ -32,7 +37,7 @@ function Home() {
 
   return (
     <>
-      <PreLoader />
+      {isPreLoading && <PreLoader />}
       <div className="flex flex-col justify-center items-stretch">
         <NavBar />
         <Header />
