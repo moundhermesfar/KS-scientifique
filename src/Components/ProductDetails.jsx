@@ -25,6 +25,8 @@ const ProductDetails = ({ product, onClose }) => {
     };
   }, [onClose]);
 
+  document.body.style.overflow = "hidden";
+  
   return (
     <div className="fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div

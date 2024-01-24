@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
 import propos from "../assets/propos.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Propos = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // You can adjust the threshold as needed
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    // Initial check on mount
     handleResize();
 
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -26,6 +29,7 @@ const Propos = () => {
       <section
         id="about"
         className="pt-10 mt-10 mb-10 flex flex-col bg-gradient-to-r from-blue-800 via-blue-600 to-blue-200"
+        data-aos="fade-right"
       >
         <div className="text-center p-5">
           <h2 className="text-3xl font-semibold text-white mb-3">
@@ -52,6 +56,7 @@ const Propos = () => {
     <section
       id="#about"
       className="h-[650px] mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-800 via-blue-400 to-blue-200"
+      data-aos="fade-right"
     >
       <div className="text-left flex flex-col justify-center max-w-[599px] mx-auto text-white">
         <h2 className="text-4xl font-semibold mb-5">A propos de nous</h2>

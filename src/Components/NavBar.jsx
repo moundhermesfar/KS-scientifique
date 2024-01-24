@@ -37,6 +37,10 @@ const NavBar = () => {
     setIsMenuVisible(!isMenuVisible);
   };
 
+  isMenuVisible
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
+
   return (
     <nav
       id="nav"

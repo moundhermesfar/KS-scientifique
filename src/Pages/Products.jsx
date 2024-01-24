@@ -22,6 +22,7 @@ const Products = () => {
 
   const closeProductDetails = () => {
     setSelectedProduct(null);
+    document.body.style.overflow = "auto";
   };
 
   useEffect(() => {
