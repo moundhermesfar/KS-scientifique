@@ -39,7 +39,7 @@ function Home() {
       {isReload && <PreLoader />}
       <div className="flex flex-col justify-center items-stretch">
         <NavBar />
-        {/* <Header /> */}
+        <Header />
         {/* <ParticleRing /> */}
         <ShuffleHero />
         <Categories categories={categories} loading={loading} />

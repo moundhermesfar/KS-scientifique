@@ -6,18 +6,13 @@ const ShuffleHero = () => {
     <section className="mt-10 w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
         <span className="block mb-4 text-xs md:text-sm text-blue-500 font-medium">
-          Welcome
+          Bien-vennez
         </span>
-        <h3 className="text-4xl md:text-6xl font-semibold">
-          La brillance du laboratoire libérée
-        </h3>
+        <h3 className="text-4xl md:text-6xl font-semibold">KS Scientifique</h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
-          Optimisez votre travail en laboratoire avec notre vente exclusive
-          d'équipements et de consommables ! Découvrez des outils et fournitures
-          de haute qualité pour des recherches de pointe. <br />
-          Offres limitées sur des équipements essentiels.
-          <br /> Améliorez votre expérience en laboratoire – faites vos achats
-          maintenant !
+          Optimisez vos expériences en laboratoire avec nos offres exclusives
+          sur des équipements de haute qualité. Découvrez des outils essentiels
+          à prix réduits. Améliorez votre recherche dès aujourd'hui !
         </p>
         <a href="##categories">
           <button className="bg-blue-700 text-white font-medium py-2 px-4 rounded transition-all hover:bg-blue-900 active:scale-95">
