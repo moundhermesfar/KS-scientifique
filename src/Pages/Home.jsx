@@ -40,7 +40,7 @@ function Home() {
       <div className="flex flex-col justify-center items-stretch">
         <NavBar />
         {/* <Header /> */}
-        <ParticleRing />
+        {/* <ParticleRing /> */}
         <ShuffleHero />
         <Categories categories={categories} loading={loading} />
         <Propos />
