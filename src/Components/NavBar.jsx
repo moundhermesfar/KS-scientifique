@@ -44,7 +44,7 @@ const NavBar = () => {
   return (
     <nav
       id="nav"
-      className={`top-0 fixed w-full z-50 shadow-sm bg-gradient-to-r from-blue-200 via-blue-600 to-blue-800 pr-6 py-2 h-20 ${
+      className={`top-0 fixed w-full z-50 shadow-sm bg-gradient-to-r from-blue-400 via-blue-700 to-blue-900 pr-6 py-2 h-20 ${
         isMobile
           ? "flex justify-between items-center"
           : "mx-auto flex justify-between items-center"
