@@ -13,14 +13,11 @@ function Home() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isPreLoading, setPreLoading] = useState(false);
+  const isReload = performance.navigation.type === 1;
 
   useEffect(() => {
     fetchCategories();
     setLoading(true);
-    // setPreLoading(true);
-    setTimeout(() => {
-      setPreLoading(false);
-    }, 10000);
   }, []);
 
   const fetchCategories = async () => {
@@ -37,7 +34,7 @@ function Home() {
 
   return (
     <>
-      {isPreLoading && <PreLoader />}
+      {isReload && <PreLoader />}
       <div className="flex flex-col justify-center items-stretch">
         <NavBar />
         <Header />
