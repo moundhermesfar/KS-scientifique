@@ -32,6 +32,7 @@ const ProductDetails = ({ product, onClose }) => {
       <div
         ref={modalRef}
         className="m-10 relative bg-white w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-lg p-4 flex flex-col md:flex-row"
+        style={{animation: 'dropTop .3s linear'}}
       >
         <div className="w-full md:w-1/2 mb-2 md:mb-0">
           <img
