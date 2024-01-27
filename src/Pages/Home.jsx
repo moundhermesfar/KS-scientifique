@@ -10,6 +10,7 @@ import axios from "axios";
 import PreLoader from "../Components/PreLoader";
 import ShuffleHero from "../Components/HeaderMotion";
 import ParticleRing from "../Components/ParticleRing";
+import Nav from "../Components/Nav";
 
 function Home() {
   const [categories, setCategories] = useState([]);
@@ -38,7 +39,8 @@ function Home() {
     <>
       {isReload && <PreLoader />}
       <div className="flex flex-col justify-center items-stretch">
-        <NavBar />
+        {/* <NavBar /> */}
+        <Nav />
         <Header />
         {/* <ParticleRing /> */}
         <ShuffleHero />
