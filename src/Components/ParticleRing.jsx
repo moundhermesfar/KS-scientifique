@@ -3,14 +3,14 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere } from "@react-three/drei";
 import { pointsInner, pointsOuter } from "./utils";
 
-const ParticleRing = () => {
+const ParticleRing = ({ isMobile }) => {
   return (
     <div className="relative w-full h-full">
       <Canvas
         camera={{
           position: [10, -7.5, -5],
         }}
-        style={{ height: "100vh" }}
+        style={isMobile ? { height: "50vh" } : { height: "650px"}}
         className="bg-slate-900"
       >
         <OrbitControls maxDistance={20} minDistance={10} />

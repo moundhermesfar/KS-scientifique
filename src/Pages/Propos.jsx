@@ -46,9 +46,9 @@ const Propos = () => {
             scientifique!
           </p>
         </div>
-        <div className="mx-auto mt-5 w-[100%]">
+        <div className="mx-auto mt-5  w-[100%]">
           {/* <img src={propos} className="w-full h-auto" alt="A propos" /> */}
-          <ParticleRing />
+          <ParticleRing isMobile={true} />
         </div>
       </section>
     );
@@ -57,7 +57,7 @@ const Propos = () => {
   return (
     <section
       id="#about"
-      className="h-[745px] mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500"
+      className="h-[650px] mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500"
       data-aos="fade-right"
     >
       <div className="text-left flex flex-col justify-center max-w-[599px] mx-auto text-white">
@@ -72,9 +72,9 @@ const Propos = () => {
           l'excellence scientifique!
         </p>
       </div>
-      <div className="w-2/5 h-[100%]]">
+      <div className="w-2/5">
         {/* <img src={propos} className="w-[650px] h-[650px]" alt="A propos" /> */}
-        <ParticleRing />
+        <ParticleRing isMobile={false} />
       </div>
     </section>
   );
