@@ -8,6 +8,7 @@ import ProductDetails from "../Components/ProductDetails";
 import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import Spinner from "../Components/Spinner";
+import Nav from "../Components/Nav";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -64,7 +65,7 @@ const Products = () => {
 
   return (
     <>
-      <NavBar />
+      <Nav />
       <div className="mt-10 text-center flex flex-col items-center">
         <motion.div variants={textVariant()}>
           <h2 className="mt-20 p-4 text-red-600 text-[32px] font-normal font-['DM Serif Display']">

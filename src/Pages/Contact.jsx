@@ -7,6 +7,7 @@ import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
+import Nav from "../Components/Nav";
 
 const Contact = () => {
   const formRef = useRef();
@@ -77,7 +78,7 @@ const Contact = () => {
 
   return (
     <div>
-      <NavBar />
+      <Nav />
       <div className="pt-[10%] pb-[10%] bg-blue-200">
         <div
           className={`rounded-[30px] ml-[10%] w-[80%] pb-20 pt-10 bg-blue-800 xl:mt-12 flex xl:flex-row flex-col-reverse overflow-hidden`}
