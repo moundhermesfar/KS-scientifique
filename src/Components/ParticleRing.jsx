@@ -5,7 +5,7 @@ import { pointsInner, pointsOuter } from "./utils";
 
 const ParticleRing = () => {
   return (
-    <div className="relative">
+    <div className="relative w-full h-full">
       <Canvas
         camera={{
           position: [10, -7.5, -5],
@@ -19,9 +19,9 @@ const ParticleRing = () => {
         <PointCircle />
       </Canvas>
 
-      <h1 className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-2xl md:text-5xl pointer-events-none">
+      {/* <h1 className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-2xl md:text-5xl pointer-events-none">
         Welcome !
-      </h1>
+      </h1> */}
     </div>
   );
 };
