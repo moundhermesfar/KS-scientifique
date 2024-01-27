@@ -17,20 +17,20 @@ const Header = () => {
     return () => clearInterval(interval);
   }, [currentImage, images]);
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const parallaxValue = scrollPosition * 0.5; // Adjust this value for the desired parallax effect
-    document.getElementById(
-      "parallaxImage"
-    ).style.transform = `translateY(${parallaxValue}px)`;
-  };
+  // const handleScroll = () => {
+  //   const scrollPosition = window.scrollY;
+  //   const parallaxValue = scrollPosition * 1; // Adjust this value for the desired parallax effect
+  //   document.getElementById(
+  //     "parallaxImage"
+  //   ).style.transform = `translateY(${parallaxValue}px)`;
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <header
