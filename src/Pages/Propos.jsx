@@ -28,7 +28,7 @@ const Propos = () => {
   if (isMobile) {
     return (
       <section
-        id="about"
+        id="#about"
         className="pt-10 mt-10 mb-10 flex flex-col bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500"
         data-aos="fade-right"
       >

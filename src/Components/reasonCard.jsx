@@ -8,7 +8,7 @@ const ReasonCard = ({ reason }) => {
   return (
     <motion.div
       ref={myRef}
-      variants={slideIn("left", "spring", 0, 3)}
+      variants={slideIn("left", "tween", 0, 0.7)}
       initial="hidden"
       animate={isVisibale ? "show" : ""}
       className="p-3 max-h-[500px] h-[450px] bg-white rounded-[50px] px-4 py-2 m-4 relative text-center shadow-[3px_5px_5px_3px_#ff000040]"
