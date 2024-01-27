@@ -20,7 +20,7 @@ const Categories = ({ categories, loading }) => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-[50px]">
           {categories.map((category, index) => (
             <Link to={`/products/${category._id}`} key={category._id}>
               <Category key={category._id} index={index} category={category} />
