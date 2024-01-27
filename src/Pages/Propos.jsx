@@ -57,7 +57,7 @@ const Propos = () => {
   return (
     <section
       id="#about"
-      className="h-[650px] mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500"
+      className="h-[650px] mt-20 mb-20 flex flex-row bg-gradient-to-r from-blue-900 via-blue-700 to-blue-700"
       data-aos="fade-right"
     >
       <div className="text-left flex flex-col justify-center max-w-[599px] mx-auto text-white">

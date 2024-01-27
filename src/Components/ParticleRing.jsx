@@ -11,7 +11,7 @@ const ParticleRing = ({ isMobile }) => {
           position: [10, -7.5, -5],
         }}
         style={isMobile ? { height: "50vh" } : { height: "650px"}}
-        className="bg-slate-900"
+        className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500"
       >
         <OrbitControls maxDistance={20} minDistance={10} />
         <directionalLight />
