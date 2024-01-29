@@ -68,11 +68,11 @@ const Products = () => {
       <Nav />
       <div className="mt-10 text-center flex flex-col items-center">
         <motion.div variants={textVariant()}>
-          <h2 className="mt-20 p-4 text-red-600 text-[32px] font-normal font-['DM Serif Display']">
+          <h2 className="mt-20 p-4 text-blue-700 text-[32px] font-normal font-['DM Serif Display']">
             {category?.name}
           </h2>
         </motion.div>
-        <hr className="bg-black border-t border-red-600 w-1/2 mx-auto border-solid border-b-2" />
+        <hr className="bg-black border-t border-blue-700 w-1/2 mx-auto border-solid border-b-2" />
         {loading ? (
           <Spinner />
         ) : filteredProducts.length ? (
