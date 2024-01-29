@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <header
-      id="#home"
+      // id="#home"
       className="mt-10 flex-col overflow-hidden relative flex min-h-[800px] w-full max-md:max-w-full z-10"
     >
       <img

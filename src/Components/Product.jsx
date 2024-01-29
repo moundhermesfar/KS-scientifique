@@ -13,23 +13,18 @@ const Product = ({ product, index, onClick }) => {
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
-          className="mb-20 rounded-lg p-5 m-4 relative text-center hover:shadow-xl"
+          className="p-5 m-5 md:w-[320px] h-[250px] bg-blue-100 shadow-md flex items-center justify-center rounded-[40px]"
           onClick={onClick}
         >
-          <div className="bg-blue-400 shadow-md flex items-center justify-center rounded-lg">
-            <img
-              src={`data:${product.img.contentType};base64,${product.img.data}`}
-              alt={name}
-              className="object-cover w-48 h-48 m-4"
-            />
-          </div>
-          <p className="mt-4 text-red-500 font-semibold text-lg">{name}</p>
+          <img
+            src={`data:${product.img.contentType};base64,${product.img.data}`}
+            alt={name}
+            className="rounded-[40px] object-cover w-full h-full md:w-[180px] md:h-[180px]"
+          />
         </div>
+        <p className="mt-4 text-blue-700 font-semibold text-lg text-center">
+          {name}
+        </p>
       </motion.div>
     </Tilt>
   );
