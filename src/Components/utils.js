@@ -3,7 +3,7 @@ const MAX_RADIUS = 15;
 const DEPTH = 2;
 const LEFT_COLOR = "FF0000";
 const RIGHT_COLOR = "0001D3";
-const NUM_POINTS = 3500;
+const NUM_POINTS = 2500;
 
 /**
  * --- Credit ---
