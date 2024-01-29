@@ -33,7 +33,7 @@ body {
   font-size: 20px;
   font-weight: 800;
   overflow: hidden;
-  color: #fff;
+  color: #000;
 }
 
 @keyframes dropTop {

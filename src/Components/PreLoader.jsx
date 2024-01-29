@@ -6,8 +6,8 @@ export const PreLoader = () => {
     preLoaderAnim();
   }, []);
   return (
-    <div className="bg-gradient-to-r from-blue-400 via-blue-700 to-blue-900 preloader">
-      <div className="texts-container">
+    <div className="bg-blue-100 preloader">
+      <div className="texts-container text-black">
         <span>Bienvenue</span>
         <span>chez</span>
         <span className="text-red-600 text-2xl font-bold font-serif">KS</span>
