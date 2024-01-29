@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { EarthCanvas } from "../canvas";
 import { slideIn } from "../../utils/motion";
-import NavBar from "../../Components/NavBar";
+import Nav from "../../Components/Nav";
 import Footer from "../../Components/Footer";
 import { useNavigate } from "react-router-dom";
 
@@ -49,8 +49,8 @@ const Login = () => {
 
   return (
     <div>
-      <NavBar />
-      <div className="pt-[10%] pb-[10%] bg-blue-200">
+      <Nav />
+      <div className="pt-[10%] pb-[10%] bg-white">
         <div
           className={`rounded-[30px] ml-[10%] w-[80%] pb-20 pt-10 bg-blue-800 xl:mt-12 flex xl:flex-row flex-col-reverse overflow-hidden`}
         >
