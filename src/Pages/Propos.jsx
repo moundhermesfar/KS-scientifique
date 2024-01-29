@@ -35,7 +35,7 @@ const Propos = () => {
             scientifique!
           </p>
         </div>
-        <div className="mx-auto mt-5  w-[100%]">
+        <div className="mx-auto mt-5 w-[100%]">
           <ParticleRing isMobile={true} />
         </div>
       </section>

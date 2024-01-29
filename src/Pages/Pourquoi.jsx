@@ -1,15 +1,30 @@
+import { useEffect, useState } from "react";
 import ReasonCard from "../Components/reasonCard.jsx";
-import { fadeIn, textVariant } from "../utils/motion";
-import { motion } from "framer-motion";
 
 const Pourquoi = ({ reasons }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       id="#why"
       className="mb-20 mt-20 text-center flex flex-col items-center p-5"
     >
       <div className="mb-10">
-        <h2 className="text-5xl font-semibold text-black mb-5">
+        <h2 className={isMobile ? "text-4xl font-semibold text-black mb-5" : "text-5xl font-semibold text-black mb-5"}>
           <span className="text-blue-700">Pourquoi</span> KS scientifique
         </h2>
       </div>
