@@ -8,22 +8,17 @@ const Footer = () => {
   return (
     <footer
       id="#contact"
-      className="border-t border-gray-500 pt-20 shadow-sm bg-white text-black flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
+      className="border-t border-gray-500 pt-20 shadow-sm bg-gradient-to-r from-blue-700 via-blue-800 to-black text-white flex-col sm:flex-row justify-center items-center h-[400px] content-center p-8"
     >
       <div className="text-center font-serif mb-6">
-        <p className="text-2xl sm:text-4xl text-gray-700">Contactez Nous</p>
+        <p className="text-2xl sm:text-4xl">Contactez Nous</p>
       </div>
       <div className="pt-4 sm:pt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 space-x-0 sm:space-x-8">
         <div className="mb-4 sm:mb-0 flex justify-center items-center">
           <a href="#" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              size="2x"
-              color="#4682B4"
-              className="hover:text-blue-800"
-            />
+            <FontAwesomeIcon icon={faEnvelope} size="2x" color="#FFF" />
           </a>
-          <p className="ml-2 text-sm sm:text-lg font-medium text-black">
+          <p className="ml-2 text-sm sm:text-lg font-medium">
             kscientifique@gmail.com
           </p>
         </div>
@@ -36,24 +31,20 @@ const Footer = () => {
             <FontAwesomeIcon
               icon={faFacebook}
               size="2x"
-              color="#4682B4"
-              className="hover:text-blue-800"
+              color="#FFF"
             />
           </a>
-          <p className="ml-2 text-sm sm:text-lg font-medium text-black">
-            kS Scientifique
-          </p>
+          <p className="ml-2 text-sm sm:text-lg font-medium">kS Scientifique</p>
         </div>
         <div className="flex justify-center items-center">
           <a href="#" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
               icon={faPhone}
               size="2x"
-              color="#4682B4"
-              className="hover:text-blue-800"
+              color="#FFF"
             />
           </a>
-          <p className="ml-2 text-sm sm:text-lg font-medium text-black">
+          <p className="ml-2 text-sm sm:text-lg font-medium">
             +213 540 30 54 96
           </p>
         </div>

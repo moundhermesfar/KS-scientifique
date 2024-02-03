@@ -3,25 +3,36 @@ import { useEffect, useRef, useState } from "react";
 
 const ShuffleHero = () => {
   return (
-    <section id="#home" className="mt-20 mb-20 w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
-      <div>
-        <span className="block mb-4 text-xl md:text-sm text-blue-500 font-medium">
-          Bien-vennez
-        </span>
-        <h3 className="text-5xl md:text-6xl font-semibold"><span className="text-red-600">KS</span> Scientifique</h3>
-        <p className="text-base md:text-lg text-gray-600 my-4 md:my-6">
-          Optimisez vos expériences en laboratoire avec nos offres exclusives
-          sur des équipements de haute qualité. Découvrez des outils essentiels
-          à prix réduits. Améliorez votre recherche dès aujourd'hui !
-        </p>
-        <a href="##categories">
-          <button className="bg-blue-700 text-white font-medium py-2 px-4 rounded transition-all hover:bg-blue-900 active:scale-95">
-            trouvez votre produit
-          </button>
-        </a>
-      </div>
-      <ShuffleGrid />
-    </section>
+    <div className="mt-10 lg:p-10">
+      <section
+        id="#home"
+        className="bg-blue-700 pt-[100px] pb-[100px] w-[100%] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto"
+      >
+        <div className="lg:ml-[7%] ml-[1%]">
+          <span className="block mb-4 text-xl md:text-sm text-white font-medium">
+            Bien-vennez
+          </span>
+          <h3
+            style={{ color: "#fff" }}
+            className="text-5xl md:text-6xl font-semibold"
+          >
+            <span className="text-red-500">KS</span> Scientifique
+          </h3>
+          <p className="text-base md:text-lg text-white my-4 md:my-6">
+            Optimisez vos expériences en laboratoire avec nos offres exclusives
+            sur des équipements de haute qualité. Découvrez des outils
+            essentiels à prix réduits. Améliorez votre recherche dès aujourd'hui
+            !
+          </p>
+          <a href="##categories">
+            <button className="bg-red-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-red-700 active:scale-95">
+              trouvez votre produit
+            </button>
+          </a>
+        </div>
+        <ShuffleGrid />
+      </section>
+    </div>
   );
 };
 
@@ -141,7 +152,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
+    <div className="mr-[5%] grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
       {squares.map((sq) => sq)}
     </div>
   );

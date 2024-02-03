@@ -5,7 +5,7 @@ const Nav = () => {
   const Links = [
     { name: "Home", link: "##home" },
     { name: "Categories", link: "/##categories" },
-    { name: "A propos de KS", link: "/##about" },
+    { name: "A propos", link: "/##about" },
     { name: "Pourquoi KS", link: "/##why" },
     { name: "Contact", link: "/#contact" },
     { name: "Admin", link: "/#admin" },
@@ -28,7 +28,7 @@ const Nav = () => {
     : (document.body.style.overflow = "auto");
 
   return (
-    <nav id="nav" className="z-50 shadow-md w-full fixed top-0 left-0">
+    <nav id="nav" className="z-50 w-full fixed top-0 left-0">
       <div className="h-[70px] md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         <div className="flex items-center">
           <a href="##home" onClick={() => setOpen(false)}>
@@ -49,7 +49,7 @@ const Nav = () => {
 
         <ul
           className={`mr-[5%] md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-top duration-500 ease-in ${
-            open ? "top-[57px] bg-blue-100" : "bg-white top-[-490px]"
+            open ? "top-[57px] bg-white" : "bg-white top-[-490px]"
           }`}
         >
           {Links.map((link) => (
@@ -59,7 +59,7 @@ const Nav = () => {
             >
               <a
                 href={link.link}
-                className="text-black hover:text-gray-500 hover:underline"
+                className="text-black hover:underline"
                 onClick={() => setOpen(false)}
               >
                 {link.name}

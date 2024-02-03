@@ -10,7 +10,7 @@ const Product = ({ product, index, onClick }) => {
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        className="mb-10 mt-10 w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
           className="p-5 m-5 md:w-[320px] h-[250px] bg-blue-100 shadow-md flex items-center justify-center rounded-[40px]"

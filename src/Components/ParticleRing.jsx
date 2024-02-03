@@ -8,14 +8,14 @@ const ParticleRing = ({ isMobile }) => {
     <div className="relative w-full h-full">
       <Canvas
         camera={{
-          position: [10, -7.5, -5],
+          position: [-8, -10.5, -5],
         }}
         style={isMobile ? { height: "50vh" } : { height: "650px"}}
         className={isMobile ? "bg-white" : "bg-white" }
       >
         <OrbitControls maxDistance={20} minDistance={10} />
         <directionalLight />
-        <pointLight position={[-30, 0, -30]} power={10.0} />
+        <pointLight position={[30, 0, -30]} power={10.0} />
         <PointCircle />
       </Canvas>
 

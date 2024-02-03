@@ -3,7 +3,7 @@ const MAX_RADIUS = 15;
 const DEPTH = 2;
 const LEFT_COLOR = "FF0000";
 const RIGHT_COLOR = "0001D3";
-const NUM_POINTS = 2500;
+const NUM_POINTS = 3500;
 
 /**
  * --- Credit ---
@@ -50,8 +50,8 @@ export const pointsInner = Array.from(
   const randomRadius = randomFromInterval(MIN_RADIUS, MAX_RADIUS);
   const randomAngle = Math.random() * Math.PI * 2;
 
-  const x = Math.cos(randomAngle) * randomRadius;
-  const y = Math.sin(randomAngle) * randomRadius;
+  const x = Math.sin(randomAngle) * randomRadius;
+  const y = Math.cos(randomAngle) * randomRadius;
   const z = randomFromInterval(-DEPTH, DEPTH);
 
   const color = calculateColor(x);

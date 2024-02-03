@@ -37,7 +37,7 @@ function Home() {
 
   return (
     <>
-      {isReload && <PreLoader />}
+      {/* {isReload && <PreLoader />} */}
       <div className="flex flex-col justify-center items-stretch">
         {/* <NavBar /> */}
         <Nav />

@@ -12,11 +12,12 @@ const Categories = ({ categories, loading }) => {
       className="mb-20 text-center flex flex-col items-center"
     >
       <motion.div variants={textVariant()}>
-        <h2 className="text-5xl font-semibold mt-20 p-4 text-blue-700 text-[32px]">
+        <h2 className="text-5xl font-semibold mt-20 p-4 text-red-500">
           Catégories
         </h2>
       </motion.div>
-      <hr className="mt-5 bg-black border-t border-blue-700 w-1/2 mx-auto border-solid border-b-2" />
+      <hr className="mt-5 bg-black border-t border-red-500
+       w-1/2 mx-auto border-solid border-b-2" />
       {loading ? (
         <Spinner />
       ) : (
