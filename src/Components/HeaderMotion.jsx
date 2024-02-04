@@ -6,7 +6,7 @@ const ShuffleHero = () => {
     <div className="mt-10 lg:p-10">
       <section
         id="#home"
-        className="bg-blue-700 pt-[100px] pb-[100px] w-[100%] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto"
+        className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-700  pt-[100px] pb-[100px] w-[100%] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto"
       >
         <div className="lg:ml-[7%] ml-[1%]">
           <span className="block mb-4 text-xl md:text-sm text-white font-medium">
