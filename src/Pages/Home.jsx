@@ -11,6 +11,7 @@ import PreLoader from "../Components/PreLoader";
 import ShuffleHero from "../Components/HeaderMotion";
 import ParticleRing from "../Components/ParticleRing";
 import Nav from "../Components/Nav";
+import Footer1 from "../Components/Footer1";
 
 function Home() {
   const [categories, setCategories] = useState([]);
@@ -47,7 +48,8 @@ function Home() {
         <Categories categories={categories} loading={loading} />
         <Propos />
         <Pourquoi reasons={reasons} />
-        <Footer />
+        {/* <Footer /> */}
+        <Footer1 />
       </div>
     </>
   );

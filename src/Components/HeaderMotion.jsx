@@ -2,11 +2,40 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const ShuffleHero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const svgBackground = isMobile
+    ? `
+  url("data:image/svg+xml,${encodeURIComponent(
+    '<svg id="visual" viewBox="0 0 600 900" width="600" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="600" height="900" fill="#0531a0"></rect><g><g transform="translate(85 188)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#4FACF7"></path></g><g transform="translate(393 690)"><path d="M0 -118L102.2 -59L102.2 59L0 118L-102.2 59L-102.2 -59Z" fill="#4FACF7"></path></g><g transform="translate(403 142)"><path d="M0 -135L116.9 -67.5L116.9 67.5L0 135L-116.9 67.5L-116.9 -67.5Z" fill="#4FACF7"></path></g></g></svg>'
+  )}")
+  center / cover no-repeat`
+    : `
+  url("data:image/svg+xml,${encodeURIComponent(
+    '<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="900" height="600" fill="#0531a0"></rect><g><g transform="translate(170 283)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#4FACF7"></path></g><g transform="translate(513 546)"><path d="M0 -91L78.8 -45.5L78.8 45.5L0 91L-78.8 45.5L-78.8 -45.5Z" fill="#4FACF7"></path></g><g transform="translate(54 5)"><path d="M0 -110L95.3 -55L95.3 55L0 110L-95.3 55L-95.3 -55Z" fill="#4FACF7"></path></g></g></svg>'
+  )}")
+  center / cover no-repeat`;
+
   return (
     <div className="mt-10 lg:p-10">
       <section
         id="#home"
-        className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-700  pt-[100px] pb-[100px] w-[100%] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto"
+        className="  pt-[100px] pb-[100px] w-[100%] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto"
+        style={{ background: svgBackground }}
       >
         <div className="lg:ml-[7%] ml-[1%]">
           <span className="block mb-4 text-xl md:text-sm text-white font-medium">
