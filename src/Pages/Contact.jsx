@@ -94,7 +94,7 @@ const Contact = () => {
               className="mt-12 flex flex-col gap-8"
             >
               <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">Votre nom</span>
+                <span className="text-white font-medium mb-4">Nom et Prenom:</span>
                 <input
                   type="text"
                   name="name"
@@ -105,26 +105,26 @@ const Contact = () => {
                 />
               </label>
               <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">Votre email</span>
+                <span className="text-white font-medium mb-4">Votre email:</span>
                 <input
                   type="email"
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="Quelle est l'adresse de votre site web ?"
+                  placeholder="Quelle est votre adresse email?"
                   className="bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium"
                 />
               </label>
               <label className="flex flex-col">
                 <span className="text-white font-medium mb-4">
-                  Votre message
+                  Votre message:
                 </span>
                 <textarea
                   rows={7}
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="Que souhaitez-vous dire ?"
+                  placeholder="Contenue de message"
                   className="bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium"
                 />
               </label>

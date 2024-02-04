@@ -3,12 +3,12 @@ import logo from "../assets/logo-img.png";
 
 const Nav = () => {
   const Links = [
-    { name: "Home", link: "##home" },
-    { name: "Categories", link: "/##categories" },
-    { name: "A propos", link: "/##about" },
-    { name: "Pourquoi KS", link: "/##why" },
-    { name: "Contact", link: "/#contact" },
-    { name: "Admin", link: "/#admin" },
+    { name: "HOME", link: "##home" },
+    { name: "CATEGORIES", link: "/##categories" },
+    { name: "A PROPOS", link: "/##about" },
+    { name: "POURQUOI KS", link: "/##why" },
+    { name: "CONTACT", link: "/#contact" },
+    { name: "ADMIN", link: "/#admin" },
   ];
   const [open, setOpen] = useState(false);
   useEffect(() => {
