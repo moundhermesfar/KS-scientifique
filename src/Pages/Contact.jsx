@@ -1,13 +1,11 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
-import NavBar from "../Components/NavBar";
-import Footer from "../Components/Footer";
 import Nav from "../Components/Nav";
+import Footer1 from "../Components/Footer1";
 
 const Contact = () => {
   const formRef = useRef();
@@ -148,7 +146,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
-      <Footer />
+      <Footer1 />
     </div>
   );
 };

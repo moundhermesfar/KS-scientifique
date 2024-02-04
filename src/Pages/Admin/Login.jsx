@@ -4,8 +4,8 @@ import { styles } from "../../styles";
 import { EarthCanvas } from "../canvas";
 import { slideIn } from "../../utils/motion";
 import Nav from "../../Components/Nav";
-import Footer from "../../Components/Footer";
 import { useNavigate } from "react-router-dom";
+import Footer1 from "../../Components/Footer1";
 
 const Login = () => {
   const [auth, setAuth] = useState(false);
@@ -105,7 +105,7 @@ const Login = () => {
           </motion.div>
         </div>
       </div>
-      <Footer />
+      <Footer1 />
     </div>
   );
 };

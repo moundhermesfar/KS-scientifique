@@ -1,14 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import NavBar from "../Components/NavBar";
-import Footer from "../Components/Footer";
 import Product from "../Components/Product";
 import ProductDetails from "../Components/ProductDetails";
 import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import Spinner from "../Components/Spinner";
 import Nav from "../Components/Nav";
+import Footer1 from "../Components/Footer1";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -99,7 +98,7 @@ const Products = () => {
           </div>
         )}
       </div>
-      <Footer />
+      <Footer1 />
     </>
   );
 };
