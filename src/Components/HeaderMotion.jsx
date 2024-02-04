@@ -20,41 +20,38 @@ const ShuffleHero = () => {
 
   const svgBackground = isMobile
     ? `
-  url("data:image/svg+xml,${encodeURIComponent(
-    '<svg id="visual" viewBox="0 0 600 900" width="600" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="600" height="900" fill="#0531a0"></rect><g><g transform="translate(85 188)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#4FACF7"></path></g><g transform="translate(393 690)"><path d="M0 -118L102.2 -59L102.2 59L0 118L-102.2 59L-102.2 -59Z" fill="#4FACF7"></path></g><g transform="translate(403 142)"><path d="M0 -135L116.9 -67.5L116.9 67.5L0 135L-116.9 67.5L-116.9 -67.5Z" fill="#4FACF7"></path></g></g></svg>'
-  )}")
+url("data:image/svg+xml,${encodeURIComponent(
+        '<svg id="visual" viewBox="0 0 675 900" width="675" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="675" height="900" fill="#fff"></rect><g><g transform="translate(416 138)"><path d="M0 -155.9L135 -78L135 78L0 155.9L-135 78L-135 -78Z" fill="#139FFB"></path></g><g transform="translate(38 486)"><path d="M0 -85L73.6 -42.5L73.6 42.5L0 85L-73.6 42.5L-73.6 -42.5Z" fill="#139FFB"></path></g><g transform="translate(454 788)"><path d="M0 -86L74.5 -43L74.5 43L0 86L-74.5 43L-74.5 -43Z" fill="#139FFB"></path></g></g></svg>'
+      )}")
   center / cover no-repeat`
     : `
-  url("data:image/svg+xml,${encodeURIComponent(
-    '<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="900" height="600" fill="#0531a0"></rect><g><g transform="translate(170 283)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#4FACF7"></path></g><g transform="translate(513 546)"><path d="M0 -91L78.8 -45.5L78.8 45.5L0 91L-78.8 45.5L-78.8 -45.5Z" fill="#4FACF7"></path></g><g transform="translate(54 5)"><path d="M0 -110L95.3 -55L95.3 55L0 110L-95.3 55L-95.3 -55Z" fill="#4FACF7"></path></g></g></svg>'
-  )}")
+url("data:image/svg+xml,${encodeURIComponent(
+        '<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="900" height="600" fill="#fff"></rect><g><g transform="translate(295 184)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#139FFB"></path></g><g transform="translate(650 164)"><path d="M0 -111L96.1 -55.5L96.1 55.5L0 111L-96.1 55.5L-96.1 -55.5Z" fill="#139FFB"></path></g><g transform="translate(584 467)"><path d="M0 -78L67.5 -39L67.5 39L0 78L-67.5 39L-67.5 -39Z" fill="#139FFB"></path></g></g></svg>'
+      )}")
   center / cover no-repeat`;
 
   return (
-    <div className="mt-10 lg:p-10">
+    <div className="lg:p-10">
       <section
         id="#home"
         className="  pt-[100px] pb-[100px] w-[100%] px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto"
         style={{ background: svgBackground }}
       >
         <div className="lg:ml-[7%] ml-[1%]">
-          <span className="block mb-4 text-xl md:text-sm text-white font-medium">
-            Bien-vennez
-          </span>
-          <h3
-            style={{ color: "#fff" }}
-            className="text-5xl md:text-6xl font-semibold"
-          >
-            <span className="text-red-500">KS</span> Scientifique
+          <h3 className="text-black text-5xl md:text-6xl font-semibold">
+            <span style={{ color: "#139FFB" }}>KS</span> Scientifique
           </h3>
-          <p className="text-base md:text-lg text-white my-4 md:my-6">
+          <p className="max-w-[500px] text-base md:text-lg text-black my-4 md:my-6">
             Optimisez vos expériences en laboratoire avec nos offres exclusives
             sur des équipements de haute qualité. Découvrez des outils
             essentiels à prix réduits. Améliorez votre recherche dès aujourd'hui
             !
           </p>
           <a href="##categories">
-            <button className="bg-red-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-red-700 active:scale-95">
+            <button
+              style={{ background: "#139FFB" }}
+              className="mt-10 text-white font-medium py-2 px-4 rounded transition-all hover:bg-red-700 active:scale-95"
+            >
               trouvez votre produit
             </button>
           </a>
