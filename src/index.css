@@ -19,3 +19,7 @@ body {
     opacity: 1;
   }
 }
+
+body {
+  font-family: serif;
+}

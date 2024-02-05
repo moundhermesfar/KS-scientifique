@@ -79,7 +79,7 @@ const Contact = () => {
       <Nav />
       <div className="pt-[10%] pb-[10%] bg-white">
         <div
-          className={`rounded-[30px] ml-[10%] w-[80%] pb-20 pt-10 bg-blue-800 xl:mt-12 flex xl:flex-row flex-col-reverse overflow-hidden`}
+          className={`rounded-[30px] ml-[10%] w-[80%] pb-20 pt-10 bg-[#139FFB] xl:mt-12 flex xl:flex-row flex-col-reverse overflow-hidden`}
         >
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}

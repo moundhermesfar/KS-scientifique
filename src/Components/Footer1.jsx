@@ -81,7 +81,7 @@ const Footer1 = () => {
         </div>
       </div>
       <hr className="mx-[auto] w-[90%] text-white border-[2px] border-white" />
-      <div className="py-3 mx-auto flex justify-between md:w-[75%] my-6">
+      <div className="py-5 mx-auto flex justify-between md:w-[75%]">
         {items.map((item, index) =>
           item.type === "icon" ? (
             <SocialIcon key={index} icon={item.icon} />
