@@ -28,12 +28,12 @@ const Nav = () => {
     : (document.body.style.overflow = "auto");
 
   return (
-    <nav id="nav" className="z-50 w-full fixed top-0 left-0">
-      <div className="h-[70px] md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
+    <nav id="nav" className="z-50 w-full fixed top-0 left-0 shadow-md">
+      <div className="h-[70px] md:flex items-center justify-between bg-white md:px-10 px-7">
         <div className="flex items-center">
           <a href="##home" onClick={() => setOpen(false)}>
             <img
-              className="w-[75px]"
+              className="w-[70px]"
               src={logo}
               alt="Your Descriptive Alt Text"
             />
@@ -59,7 +59,7 @@ const Nav = () => {
             >
               <a
                 href={link.link}
-                className="text-black hover:underline"
+                className="text-black font-semibold hover:underline"
                 onClick={() => setOpen(false)}
               >
                 {link.name}

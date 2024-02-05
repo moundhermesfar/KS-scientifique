@@ -26,7 +26,7 @@ url("data:image/svg+xml,${encodeURIComponent(
   center / cover no-repeat`
     : `
 url("data:image/svg+xml,${encodeURIComponent(
-        '<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="900" height="600" fill="#fff"></rect><g><g transform="translate(295 184)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#139FFB"></path></g><g transform="translate(650 164)"><path d="M0 -111L96.1 -55.5L96.1 55.5L0 111L-96.1 55.5L-96.1 -55.5Z" fill="#139FFB"></path></g><g transform="translate(584 467)"><path d="M0 -78L67.5 -39L67.5 39L0 78L-67.5 39L-67.5 -39Z" fill="#139FFB"></path></g></g></svg>'
+        '<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect width="900" height="600" fill="#fff"></rect><g><g transform="translate(338 236)"><path d="M0 -147L127.3 -73.5L127.3 73.5L0 147L-127.3 73.5L-127.3 -73.5Z" fill="#139FFB"></path></g><g transform="translate(641 16)"><path d="M0 -144L124.7 -72L124.7 72L0 144L-124.7 72L-124.7 -72Z" fill="#139FFB"></path></g><g transform="translate(525 504)"><path d="M0 -60L52 -30L52 30L0 60L-52 30L-52 -30Z" fill="#139FFB"></path></g></g></svg>'
       )}")
   center / cover no-repeat`;
 

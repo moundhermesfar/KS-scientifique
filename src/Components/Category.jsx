@@ -14,7 +14,7 @@ const Category = ({ category, index }) => {
       >
         <div
           style={{ background: "#E9F0FF" }}
-          className="p-5 m-5 md:w-[320px] h-[250px] shadow-md flex items-center justify-center rounded-[40px] md:rounded-[40px]"
+          className="p-5 m-5 md:w-[320px] h-[250px] shadow-lg flex items-center justify-center rounded-[40px] md:rounded-[40px]"
         >
           <img
             src={`data:${category.img.contentType};base64,${category.img.data}`}
