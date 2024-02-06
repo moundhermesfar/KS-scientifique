@@ -7,7 +7,9 @@ const CreateProduct = () => {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState(0);
   const [productDescription, setProductDescription] = useState("");
-  const [file, setFile] = useState("");
+  const [file1, setFile1] = useState("");
+  const [file2, setFile2] = useState("");
+  const [file3, setFile3] = useState("");
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
 
@@ -43,9 +45,13 @@ const CreateProduct = () => {
     formData.append("price", productPrice);
     formData.append("description", productDescription);
 
-    if (file) {
-      const base64String = await fileToBase64(file);
-      formData.append("img", base64String);
+    if (file1 && file2 && file3) {
+      const base64String1 = await fileToBase64(file1);
+      const base64String2 = await fileToBase64(file2);
+      const base64String3 = await fileToBase64(file3);
+      formData.append("img1", base64String1);
+      formData.append("img2", base64String2);
+      formData.append("img3", base64String3);
     }
 
     try {
@@ -124,7 +130,17 @@ const CreateProduct = () => {
           />
           <input
             type="file"
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e) => setFile1(e.target.files[0])}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
+          <input
+            type="file"
+            onChange={(e) => setFile2(e.target.files[0])}
+            className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+          />
+          <input
+            type="file"
+            onChange={(e) => setFile3(e.target.files[0])}
             className="mb-4 p-2 border border-gray-300 rounded-md w-full"
           />
           <button

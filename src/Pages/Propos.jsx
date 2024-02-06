@@ -45,9 +45,8 @@ const Propos = () => {
         <section id="#about" className="flex flex-col bg-white">
           <div className="text-center p-5">
             <h2 className="text-4xl font-semibold text-black mb-5">
-              <span className="text-blue-700">A propos</span> de nous
+              A propos<span style={{ color: "#139FFB" }}> de nous</span>
             </h2>
-            {/* <hr className="mb-3 bg-black border-t border-white w-3/4 mx-auto border-solid border-b-2" /> */}
             <p className="text-lg text-black max-w-full mx-auto">
               Bienvenue chez KS scientifique, votre partenaire pour l'excellence
               en laboratoire. Passionnés d'innovation scientifique, nous offrons

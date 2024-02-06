@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Carousel } from "./Carousel";
 
 const ProductDetails = ({ product, onClose }) => {
   const modalRef = useRef();
@@ -26,22 +27,18 @@ const ProductDetails = ({ product, onClose }) => {
   }, [onClose]);
 
   document.body.style.overflow = "hidden";
-  
+
   return (
     <div className="fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div
         ref={modalRef}
-        className="m-10 relative bg-white w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-lg shadow-lg p-4 flex flex-col md:flex-row"
-        style={{animation: 'dropTop .3s linear'}}
+        className="m-10 relative w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-[40px] shadow-lg p-4 flex flex-col md:flex-row"
+        style={{ animation: "dropTop .3s linear", background: "#E9F0FF" }}
       >
-        <div className="w-full md:w-1/2 mb-2 md:mb-0">
-          <img
-            src={`data:${product.img.contentType};base64,${product.img.data}`}
-            alt={product.name}
-            className="w-full md:h-30 object-cover rounded-lg h-30 md:h-full"
-          />
+        <div className="w-full mb-2 md:mb-0">
+          <Carousel product={product} />
         </div>
-        <div className="p-4 md:p-8 w-full md:w-1/2 text-center">
+        <div className="my-auto p-4 md:p-8 w-full md:w-1/2 text-center">
           <button
             className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
             onClick={onClose}
@@ -63,7 +60,7 @@ const ProductDetails = ({ product, onClose }) => {
           </button>
           <h2 className="text-2xl font-semibold mt-2 mb-4">{product.name}</h2>
           <p className="text-gray-700 mb-2">
-            <span className="font-semibold">Description:</span>{" "}
+            <span className="font-semibold">Description:</span>
             {product.description}
           </p>
           <p className="text-green-600 font-semibold mb-2">

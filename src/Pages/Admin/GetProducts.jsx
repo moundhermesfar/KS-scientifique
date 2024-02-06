@@ -78,13 +78,23 @@ const GetProducts = () => {
               <h4 className="block text-xl mb-2">{product.category}</h4>
               <p className="mb-2">{product.description}</p>
               <p className="mb-2">{product.price}</p>
-              {product.img && (
+              <div className="grid grid-cols-3">
                 <img
-                  src={`data:${product.img.contentType};base64,${product.img.data}`}
+                  src={`data:${product.img1.contentType};base64,${product.img1.data}`}
                   alt={product.name}
-                  className="w-full h-40 object-cover mb-2 rounded-md"
+                  className="w-[100px] object-cover mb-2 rounded-md"
                 />
-              )}
+                <img
+                  src={`data:${product.img2.contentType};base64,${product.img2.data}`}
+                  alt={product.name}
+                  className="w-[100px] object-cover mb-2 rounded-md"
+                />
+                <img
+                  src={`data:${product.img3.contentType};base64,${product.img3.data}`}
+                  alt={product.name}
+                  className="w-[100px] object-cover mb-2 rounded-md"
+                />
+              </div>
               <div className="flex justify-between items-center">
                 <Link
                   to={`/admin/products/update-product/${product._id}`}

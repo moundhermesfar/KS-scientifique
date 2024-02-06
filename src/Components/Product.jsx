@@ -10,17 +10,17 @@ const Product = ({ product, index, onClick }) => {
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="mb-10 mt-10 w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        className="mb-10 mt-10 w-full green-pink-gradient p-[1px] rounded-[20px]"
       >
         <div
           style={{ background: "#E9F0FF" }}
-          className="p-5 m-5 md:w-[320px] h-[250px] shadow-md flex items-center justify-center rounded-[40px]"
+          className="p-5 m-5 md:w-[320px] h-[250px] shadow-lg flex items-center justify-center rounded-[40px]"
           onClick={onClick}
         >
           <img
-            src={`data:${product.img.contentType};base64,${product.img.data}`}
+            src={`data:${product.img1.contentType};base64,${product.img1.data}`}
             alt={name}
-            className="rounded-[40px] object-cover w-full h-full md:w-[180px] md:h-[180px]"
+            className="object-cover w-[150px]"
           />
         </div>
         <p
