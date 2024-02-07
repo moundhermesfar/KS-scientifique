@@ -98,10 +98,10 @@ const Propos = () => {
         className="h-[650px] flex flex-row bg-white relative overflow-hidden"
       >
         <div className="text-left flex flex-col justify-center max-w-[599px] mx-auto text-black z-10">
-          <h2 className="text-black text-5xl font-semibold mb-10">
+          <h2 className="text-black text-5xl font-semibold mb-10 px-2">
             A propos <span style={{ color: "#139FFB" }}>de nous</span>
           </h2>
-          <p className="text-black text-4xl lg:text-xl">
+          <p className="text-black text-3xl px-2">
             Bienvenue chez <strong>KS Scientifique</strong>, votre partenaire
             pour l'excellence en laboratoire. Passionnés d'innovation
             scientifique, nous offrons des équipements et consommables de

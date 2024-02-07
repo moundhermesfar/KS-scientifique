@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookSquare, FaEnvelope, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo-img.png";
 
@@ -9,9 +9,17 @@ const SocialIcon = ({ icon: Icon }) => (
   />
 );
 const Footer1 = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyToClipboard = (address) => {
+    navigator.clipboard.writeText(address);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const items = [
     { type: "icon", icon: FaFacebookSquare },
-    { type: "icon", icon: FaEnvelope },
+    { type: "icon", icon: FaEnvelope, address: "boudiafsamira514@gmail.com" },
     {
       type: "section",
       title: "Appele-nous",
@@ -81,10 +89,27 @@ const Footer1 = () => {
         </div>
       </div>
       <hr className="mx-[auto] w-[90%] text-white border-[2px] border-white" />
-      <div className="py-5 mx-auto flex justify-between md:w-[75%]">
+      <div className="py-5 mx-auto flex justify-between md:w-[75%] relative">
         {items.map((item, index) =>
           item.type === "icon" ? (
-            <SocialIcon key={index} icon={item.icon} />
+            item.icon === FaFacebookSquare ? (
+              <a
+                className="mx-auto"
+                href="https://www.facebook.com/profile.php?id=100050354096175"
+                target="_blank"
+              >
+                <SocialIcon key={index} icon={item.icon} />
+              </a>
+            ) : (
+              <div
+                key={index}
+                onClick={() => handleCopyToClipboard(item.address)}
+                className="mx-auto"
+              >
+                <SocialIcon icon={item.icon} />
+                {copied && <div className="floating-text">Adresse copiée!</div>}
+              </div>
+            )
           ) : null
         )}
       </div>
