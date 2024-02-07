@@ -19,7 +19,7 @@ const ReasonCard = ({ reason }) => {
           className="rounded-full mt-[5%] mb-[9%] w-24 h-24 object-cover mx-auto"
         />
       </div>
-      <div className="mb-2">
+      <div className="mb-1">
         <h2 className="text-xl font-bold">{reason.title}</h2>
       </div>
       <div className="align-block align-middle flex items-center">
