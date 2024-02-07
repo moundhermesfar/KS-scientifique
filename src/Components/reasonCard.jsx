@@ -16,7 +16,7 @@ const ReasonCard = ({ reason }) => {
       <div className="mb-2 mx-auto">
         <img
           src={reason.pic}
-          className="rounded-full mt-[5%] mb-[12%] w-24 h-24 object-cover mx-auto"
+          className="rounded-full mt-[5%] mb-[9%] w-24 h-24 object-cover mx-auto"
         />
       </div>
       <div className="mb-2">
