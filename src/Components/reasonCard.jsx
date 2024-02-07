@@ -23,7 +23,7 @@ const ReasonCard = ({ reason }) => {
         <h2 className="text-xl font-bold">{reason.title}</h2>
       </div>
       <div className="align-block align-middle flex items-center">
-        <p className="align-block my-5 align-middle max-h-[350px]">
+        <p className="align-block mb-5 mt-2 align-middle max-h-[350px]">
           {reason.paragraph}
         </p>
       </div>
