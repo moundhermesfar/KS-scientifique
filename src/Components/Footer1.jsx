@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebookSquare, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaEnvelope } from "react-icons/fa";
 import logo from "../assets/logo-img.png";
 
 const SocialIcon = ({ icon: Icon }) => (

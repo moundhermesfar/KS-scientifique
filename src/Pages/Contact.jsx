@@ -4,16 +4,23 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
+import { useSnackbar } from "notistack";
 import Nav from "../Components/Nav";
 import Footer1 from "../Components/Footer1";
 
 const Contact = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const isEmailValid = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const [loading, setLoading] = useState(false);
 
@@ -31,8 +38,12 @@ const Contact = () => {
     setLoading(true);
 
     if (!form.name || !form.email || !form.message) {
-      alert("Veuillez remplir le formulaire avant de l'envoyer.");
+      enqueueSnackbar("Veuillez remplir le formulaire avant de l'envoyer.", {
+        variant: "error",
+      });
       setLoading(false);
+    } else if (!isEmailValid(form.email)) {
+      enqueueSnackbar("Adresse e-mail invalide", { variant: "error" });
     } else {
       // Use template literals for cleaner code
       emailjs
@@ -54,7 +65,9 @@ const Contact = () => {
             console.log("Email sent successfully:", response);
 
             // Consider displaying a success message to the user instead of using the alert
-            alert("Merci. Nous vous répondrons dès que possible.");
+            enqueueSnackbar("Merci. Nous vous répondrons dès que possible.", {
+              variant: "info",
+            });
 
             // Clear the form after successful submission
             setForm({
@@ -68,7 +81,12 @@ const Contact = () => {
             console.error("Error sending email:", error);
 
             // Display an error message to the user
-            alert("Ahh, something went wrong. Please try again.");
+            enqueueSnackbar(
+              "Ah, quelque chose s'est mal passé. Veuillez réessayer.",
+              {
+                variant: "error",
+              }
+            );
           }
         );
     }
@@ -94,7 +112,9 @@ const Contact = () => {
               className="mt-12 flex flex-col gap-8"
             >
               <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">Nom et Prenom:</span>
+                <span className="text-white font-medium mb-4">
+                  Nom et Prenom:
+                </span>
                 <input
                   type="text"
                   name="name"
@@ -105,7 +125,9 @@ const Contact = () => {
                 />
               </label>
               <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">Votre email:</span>
+                <span className="text-white font-medium mb-4">
+                  Votre email:
+                </span>
                 <input
                   type="email"
                   name="email"

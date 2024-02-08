@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useSnackbar } from "notistack";
 import { useLocation, useNavigate } from "react-router-dom";
 import BackButton from "../../Components/BackButton";
 
@@ -8,6 +9,7 @@ const CreateCategory = () => {
   const [file, setFile] = useState("");
 
   const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
   const location = useLocation();
   const auth = location.state?.auth || false;
 
@@ -32,10 +34,12 @@ const CreateCategory = () => {
         formData
       );
       navigate("/admin/categories/get-categories", { state: { auth: true } });
-      console.log(response.data);
+      enqueueSnackbar("Catégorie créée avec succès.", { variant: "success" });
     } catch (error) {
       console.error(error);
-      alert("Something went wrong, please try again");
+      enqueueSnackbar("Quelque chose s'est mal passé, veuillez réessayer.", {
+        variant: "error",
+      });
     }
   };
 

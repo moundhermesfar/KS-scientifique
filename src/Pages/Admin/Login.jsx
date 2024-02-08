@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { EarthCanvas } from "../canvas";
 import { slideIn } from "../../utils/motion";
+import { useSnackbar } from "notistack";
 import Nav from "../../Components/Nav";
 import { useNavigate } from "react-router-dom";
 import Footer1 from "../../Components/Footer1";
 
 const Login = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const [auth, setAuth] = useState(false);
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -34,14 +36,19 @@ const Login = () => {
     setLoading(true);
 
     if (!form.username || !form.password) {
-      alert("Veuillez remplir tous les champs");
+      enqueueSnackbar("Veuillez remplir tous les champs", { variant: "error" });
       setLoading(false);
     } else {
       if (form.username === username && form.password === password) {
         setAuth(true);
         navigate("/admin", { state: { auth: true } });
+        enqueueSnackbar("Bonjour de nouveau, administrateur", {
+          variant: "default",
+        });
       } else {
-        alert("Wrong password or Username");
+        enqueueSnackbar("Mauvais mot de passe ou nom d'utilisateur", {
+          variant: "warning",
+        });
         setLoading(false);
       }
     }

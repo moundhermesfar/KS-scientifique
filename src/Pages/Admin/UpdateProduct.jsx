@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useSnackbar } from "notistack";
 import { useNavigate, useParams } from "react-router-dom";
 import BackButton from "../../Components/BackButton";
 
@@ -15,6 +16,7 @@ const UpdateProduct = () => {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
     fetchProductDetails();
@@ -54,12 +56,16 @@ const UpdateProduct = () => {
     formData.append("price", productPrice);
     formData.append("category", selectedCategory);
 
-    if (file1 && file2 && file3) {
+    if (file1) {
       const base64String1 = await fileToBase64(file1);
-      const base64String2 = await fileToBase64(file2);
-      const base64String3 = await fileToBase64(file3);
       formData.append("img1", base64String1);
+    }
+    if (file2) {
+      const base64String2 = await fileToBase64(file2);
       formData.append("img2", base64String2);
+    }
+    if (file3) {
+      const base64String3 = await fileToBase64(file3);
       formData.append("img3", base64String3);
     }
 
@@ -74,10 +80,14 @@ const UpdateProduct = () => {
         }
       );
       navigate("/admin/products/get-products", { state: { auth: true } });
-      console.log(response.data);
+      enqueueSnackbar("Produit mise à jour avec succès", {
+        variant: "success",
+      });
     } catch (error) {
       console.error("Error updating product:", error);
-      alert("Something went wrong, Please try again");
+      enqueueSnackbar("Quelque chose s'est mal passé, veuillez réessayer.", {
+        variant: "error",
+      });
     }
   };
 

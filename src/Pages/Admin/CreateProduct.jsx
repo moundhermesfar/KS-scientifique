@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useSnackbar } from "notistack";
 import BackButton from "../../Components/BackButton";
 
 const CreateProduct = () => {
@@ -14,6 +15,7 @@ const CreateProduct = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
   const location = useLocation();
   const auth = location.state?.auth || false;
 
@@ -30,8 +32,12 @@ const CreateProduct = () => {
           "https://ks-scientifique-api.onrender.com/admin/categories/get-categories"
         );
         setCategories(response.data.data);
+        enqueueSnackbar("Produit créé avec succès.", { variant: "success" });
       } catch (error) {
         console.error("Error fetching categories:", error);
+        enqueueSnackbar("Quelque chose s'est mal passé, veuillez réessayer.", {
+          variant: "error",
+        });
       }
     };
 

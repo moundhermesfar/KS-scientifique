@@ -23,6 +23,7 @@
     "dotenv": "^16.3.2",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.5",
+    "notistack": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-dotenv": "^0.1.3",

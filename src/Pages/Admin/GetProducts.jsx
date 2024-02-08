@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useSnackbar } from "notistack";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import BackButton from "../../Components/BackButton";
@@ -8,6 +9,7 @@ const GetProducts = () => {
   const [products, setProducts] = useState([]);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleClickCreate = (e) => {
     e.preventDefault();
@@ -54,8 +56,14 @@ const GetProducts = () => {
       setShowDeleteModal(false);
       setSelectedProductId(null);
       fetchProducts();
+      enqueueSnackbar("Produit supprimé avec succès.", {
+        variant: "success",
+      });
     } catch (error) {
       console.error("Error deleting product:", error);
+      enqueueSnackbar("Erreur lors de la suppression de le produit.", {
+        variant: "error",
+      });
     }
   };
 
