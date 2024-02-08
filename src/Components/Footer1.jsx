@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSnackbar } from "notistack";
 import { FaFacebookSquare, FaEnvelope } from "react-icons/fa";
 import logo from "../assets/logo-img.png";
 
@@ -10,11 +11,11 @@ const SocialIcon = ({ icon: Icon }) => (
 );
 const Footer1 = () => {
   const [copied, setCopied] = useState(false);
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleCopyToClipboard = (address) => {
     navigator.clipboard.writeText(address);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    enqueueSnackbar("Adresse copiée", { variant: "default" });
   };
 
   const items = [
@@ -107,7 +108,6 @@ const Footer1 = () => {
                 className="mx-auto"
               >
                 <SocialIcon icon={item.icon} />
-                {copied && <div className="floating-text">Adresse copiée!</div>}
               </div>
             )
           ) : null

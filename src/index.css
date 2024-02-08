@@ -23,15 +23,3 @@ body {
 body {
   font-family: serif;
 }
-
-.floating-text {
-  position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 999;
-}
