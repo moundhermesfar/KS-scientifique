@@ -24,7 +24,7 @@ const Footer1 = () => {
     {
       type: "section",
       title: "Appele-nous",
-      items: ["0540 30 54 96", "0540 30 54 96", "0540 30 54 96"],
+      items: ["0540 30 54 96", "0770 91 52 94", "0793 09 99 40"],
     },
     {
       type: "section",
