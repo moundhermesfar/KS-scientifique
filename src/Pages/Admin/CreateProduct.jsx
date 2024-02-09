@@ -32,12 +32,8 @@ const CreateProduct = () => {
           "https://ks-scientifique-api.onrender.com/admin/categories/get-categories"
         );
         setCategories(response.data.data);
-        enqueueSnackbar("Produit créé avec succès.", { variant: "success" });
       } catch (error) {
         console.error("Error fetching categories:", error);
-        enqueueSnackbar("Quelque chose s'est mal passé, veuillez réessayer.", {
-          variant: "error",
-        });
       }
     };
 
@@ -67,9 +63,12 @@ const CreateProduct = () => {
       );
       console.log(response.data);
       navigate("/admin/products/get-products", { state: { auth: true } });
+      enqueueSnackbar("Produit créé avec succès.", { variant: "success" });
     } catch (error) {
       console.error(error);
-      alert("Something went wrong, please try again");
+      enqueueSnackbar("Quelque chose s'est mal passé, veuillez réessayer.", {
+        variant: "error",
+      });
     }
   };
 

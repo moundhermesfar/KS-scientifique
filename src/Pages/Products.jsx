@@ -1,29 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Product from "../Components/Product";
-import ProductDetails from "../Components/ProductDetails";
 import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import Spinner from "../Components/Spinner";
 import Nav from "../Components/Nav";
 import Footer1 from "../Components/Footer1";
+import SearchBar from "../Components/SearchBar";
+import { ProductsList } from "../Components/ProductsList";
 
 const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [result, setResult] = useState([]);
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const { id } = useParams();
   const [category, setCategory] = useState(null);
-
-  const openProductDetails = (product) => {
-    setSelectedProduct(product);
-  };
-
-  const closeProductDetails = () => {
-    setSelectedProduct(null);
-    document.body.style.overflow = "auto";
-  };
 
   useEffect(() => {
     setLoading(true);
@@ -62,14 +53,22 @@ const Products = () => {
     (product) => product.category === category?.name
   );
 
+  const handleSearch = (searchInput) => {
+    const filtered = filteredProducts.filter((product) =>
+      product.name.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    setResult(filtered);
+  };
+
   return (
     <>
       <Nav />
+      {filteredProducts.length && <SearchBar onSearch={handleSearch} />}
       <div className="mt-10 text-center flex flex-col items-center">
         <motion.div variants={textVariant()}>
           <h2
             style={{ color: "#139FFB" }}
-            className="mt-20 p-4 text-[32px] font-normal font-['DM Serif Display']"
+            className="mt-5 p-4 text-[32px] font-normal font-['DM Serif Display']"
           >
             {category?.name}
           </h2>
@@ -77,24 +76,10 @@ const Products = () => {
         <hr className="bg-black border-t border-blue-300 w-1/2 mx-auto border-solid border-b-2" />
         {loading ? (
           <Spinner />
+        ) : result.length ? (
+          <ProductsList filteredProducts={result} />
         ) : filteredProducts.length ? (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-            {filteredProducts.map((product, index) => (
-              <Product
-                key={product._id}
-                index={index}
-                product={product}
-                onClick={() => openProductDetails(product)}
-              />
-            ))}
-
-            {selectedProduct && (
-              <ProductDetails
-                product={selectedProduct}
-                onClose={closeProductDetails}
-              />
-            )}
-          </div>
+          <ProductsList filteredProducts={filteredProducts} />
         ) : (
           <div className="mt-10 mb-[100px] text-gray-500">
             <span>Aucun produit dans cette catégorie pour le moment.</span>
