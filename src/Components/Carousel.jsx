@@ -22,7 +22,7 @@ export const Carousel = ({ product }) => {
       <img
         src={`data:${images[index].contentType};base64,${images[index].data}`}
         alt={product.name}
-        className="w-[200px] my-[65%] mx-auto object-cover rounded-lg"
+        className="w-[400px] my-[65%] mx-auto object-cover rounded-lg"
       />
       <BsArrowRightCircleFill onClick={nextSlide} className="my-auto mx-auto" />
     </div>
