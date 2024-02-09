@@ -11,7 +11,7 @@ const ReasonCard = ({ reason }) => {
       variants={slideIn("left", "tween", 0, 0.5)}
       initial="hidden"
       animate={isVisibale ? "show" : ""}
-      className="p-3 max-h-[500px] h-[450px] bg-white  to-transparent rounded-[50px] px-4 py-2 m-4 relative text-center shadow-[3px_5px_5px_3px_#7EC8FF]"
+      className="max-h-[500px] h-[450px] bg-white  to-transparent rounded-[50px] px-3 py-auto m-4 relative text-center shadow-[3px_5px_5px_3px_#7EC8FF]"
     >
       <div className="mb-2 mx-auto">
         <img
