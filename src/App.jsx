@@ -17,28 +17,103 @@ const Login = lazy(() => import("./Pages/Admin/Login"));
 
 const App = () => {
   return (
-    <Suspense fallback={<Spinner />}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/products/:id" element={<Products />} />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Suspense fallback={<Spinner />}>
+            <Home />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <Suspense fallback={<Spinner />}>
+            <Contact />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/products/:id"
+        element={
+          <Suspense fallback={<Spinner />}>
+            <Products />
+          </Suspense>
+        }
+      />
 
-        <Route path="/admin/">
-          <Route path="login" element={<Login />} />
-          <Route path="" element={<Admin />} />
-          <Route path="categories/">
-            <Route path="update-category/:id" element={<UpdateCategory />} />
-            <Route path="create-category" element={<CreateCategory />} />
-            <Route path="get-categories" element={<GetCategories />} />
-          </Route>
-          <Route path="products/">
-            <Route path="get-products" element={<GetProducts />} />
-            <Route path="create-product" element={<CreateProduct />} />
-            <Route path="update-product/:id" element={<UpdateProduct />} />
-          </Route>
+      <Route path="/admin/">
+        <Route
+          path="login"
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Login />
+            </Suspense>
+          }
+        />
+        <Route
+          path=""
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Admin />
+            </Suspense>
+          }
+        />
+        <Route path="categories/">
+          <Route
+            path="update-category/:id"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <UpdateCategory />
+              </Suspense>
+            }
+          />
+          <Route
+            path="create-category"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <CreateCategory />
+              </Suspense>
+            }
+          />
+          <Route
+            path="get-categories"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <GetCategories />
+              </Suspense>
+            }
+          />
         </Route>
-      </Routes>
-    </Suspense>
+        <Route path="products/">
+          <Route
+            path="get-products"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <GetProducts />
+              </Suspense>
+            }
+          />
+          <Route
+            path="create-product"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <CreateProduct />
+              </Suspense>
+            }
+          />
+          <Route
+            path="update-product/:id"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <UpdateProduct />
+              </Suspense>
+            }
+          />
+        </Route>
+      </Route>
+    </Routes>
   );
 };
 
