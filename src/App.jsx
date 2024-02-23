@@ -1,16 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-//import Home from "./Pages/Home";
-//import CreateCategory from "./Pages/Admin/CreateCategory";
-//import GetCategories from "./Pages/Admin/GetCategories";
-//import UpdateCategory from "./Pages/Admin/UpdateCategory";
-//import Products from "./Pages/Products";
-//import CreateProduct from "./Pages/Admin/CreateProduct";
-//import Admin from "./Pages/Admin/Admin";
-//import GetProducts from "./Pages/Admin/GetProducts";
-//import UpdateProduct from "./Pages/Admin/UpdateProduct";
-//import Contact from "./Pages/Contact";
-//import Login from "./Pages/Admin/Login";
+
 import Spinner from "./Components/Spinner";
 
 const Home = lazy(() => import("./Pages/Home"));
