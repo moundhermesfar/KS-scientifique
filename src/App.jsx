@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
+import Home from "./Pages/Home";
 import Spinner from "./Components/Spinner";
 
-const Home = lazy(() => import("./Pages/Home"));
 const CreateCategory = lazy(() => import("./Pages/Admin/CreateCategory"));
 const GetCategories = lazy(() => import("./Pages/Admin/GetCategories"));
 const UpdateCategory = lazy(() => import("./Pages/Admin/UpdateCategory"));
