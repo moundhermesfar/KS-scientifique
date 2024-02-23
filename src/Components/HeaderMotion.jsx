@@ -56,7 +56,7 @@ url("data:image/svg+xml,${encodeURIComponent(
             </button>
           </a>
         </div>
-        <ShuffleGrid />
+        {/* <ShuffleGrid /> */}
       </section>
     </div>
   );
