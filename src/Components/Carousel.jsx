@@ -29,7 +29,7 @@ export const Carousel = ({ product }) => {
       <div
         style={{
           maxWidth: "400px",
-          minWidth: "290px",
+          minWidth: "270px",
           overflow: "hidden",
           margin: "10px"
         }}

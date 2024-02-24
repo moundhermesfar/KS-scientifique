@@ -29,7 +29,7 @@ const ProductDetails = ({ product, onClose }) => {
   document.body.style.overflow = "hidden";
 
   return (
-    <div className="fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50">
+    <div className="p-2 fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div
         ref={modalRef}
         className="m-[20px] relative w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-[40px] shadow-lg p-4 flex flex-col md:flex-row"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSnackbar } from "notistack";
 import { FaFacebookSquare, FaEnvelope } from "react-icons/fa";
 import logo from "../assets/logo-img.png";
@@ -10,7 +10,6 @@ const SocialIcon = ({ icon: Icon }) => (
   />
 );
 const Footer1 = () => {
-  const [copied, setCopied] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
 
   const handleCopyToClipboard = (address) => {
