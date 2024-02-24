@@ -32,7 +32,7 @@ const ProductDetails = ({ product, onClose }) => {
     <div className="fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div
         ref={modalRef}
-        className="m-10 relative w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-[40px] shadow-lg p-4 flex flex-col md:flex-row"
+        className="m-[20px] relative w-full md:w-3/4 lg:w-2/3 xl:w-1/2 rounded-[40px] shadow-lg p-4 flex flex-col md:flex-row"
         style={{ animation: "dropTop .3s linear", background: "#E9F0FF" }}
       >
         <div className="w-full mb-2 md:mb-0">
@@ -65,9 +65,6 @@ const ProductDetails = ({ product, onClose }) => {
           </p>
           <p className="text-green-600 font-semibold mb-2">
             <span className="font-semibold">Prix:</span> {product.price} DZ
-          </p>
-          <p className="text-gray-700">
-            <span className="font-semibold">Contact:</span> +213 540 30 54 96
           </p>
         </div>
       </div>

@@ -28,7 +28,7 @@ const Nav = () => {
     : (document.body.style.overflow = "auto");
 
   return (
-    <div  className={open && "fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50"}>
+    <div  className={open ? "fixed inset-0 z-50 overflow-auto flex items-center justify-center bg-gray-800 bg-opacity-50" : ""}>
       <nav id="nav" className="z-50 w-full fixed top-0 left-0 shadow-md">
         <div className="h-[70px] md:flex items-center justify-between bg-white md:px-10 px-7">
           <div className="flex items-center">
