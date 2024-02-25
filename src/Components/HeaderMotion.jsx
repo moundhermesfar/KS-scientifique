@@ -49,8 +49,7 @@ url("data:image/svg+xml,${encodeURIComponent(
           </p>
           <a href="##categories">
             <button
-              style={{ background: "#139FFB" }}
-              className="w-full mt-7 text-white text-3xl py-2 px-4 rounded transition-all active:scale-95"
+              className="w-[95%] bg-[#139FFB] hover:bg-blue-600 text-2xl mt-7 text-white py-2 px-4 rounded transition-all active:scale-95"
             >
               trouvez votre produit
             </button>
