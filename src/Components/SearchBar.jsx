@@ -14,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
       <FaSearch id="search-icon" className="text-blue-300" />
       <input
         className="bg-transparent border-none h-full text-[1.25rem] w-full ml-[5px] focus:outline-none"
-        placeholder="Type to search..."
+        placeholder="Tapez pour rechercher"
         value={input}
         onChange={(e) => handleChange(e.target.value)}
       />

@@ -61,7 +61,7 @@ const Footer1 = () => {
                   {item.items.map((subItem, subIndex) => (
                     <li
                       key={subIndex}
-                      className="text-white font-semibold py-2 text-sm"
+                      className="text-white hover:underline font-semibold py-2 text-sm"
                     >
                       <a href={`${subItem.link}`}>{subItem.title}</a>
                     </li>
