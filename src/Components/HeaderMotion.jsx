@@ -55,7 +55,7 @@ url("data:image/svg+xml,${encodeURIComponent(
             </button>
           </a>
         </div>
-        <ShuffleGrid />
+        {!isMobile && <ShuffleGrid /> }
       </section>
     </div>
   );
